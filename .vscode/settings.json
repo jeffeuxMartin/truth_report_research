@@ -48,6 +48,11 @@
         "thesis.tex": true,
     },
     "powershell.debugging.createTemporaryIntegratedConsole": true,
+    "editor.fontSize": 20,
+    "editor.wordWrap": "bounded",
+    // "editor.wordWrapColumn": 80,
+    "editor.wrappingIndent": "none",
+    // "editor.wrappingStrategy": "advanced",
     // "latex-workshop.latex.recipes": [
     //     {
     //         "name": "dummy",
