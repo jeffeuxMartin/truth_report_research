@@ -48,10 +48,21 @@
         "thesis.tex": true,
     },
     "powershell.debugging.createTemporaryIntegratedConsole": true,
-    "editor.fontSize": 20,
-    "editor.wordWrap": "bounded",
+    // "editor.fontSize": 13,
+    "editor.fontSize": 14,
+    "editor.wordWrap": "wordWrapColumn",
+    // "editor.wordWrap": "wordWrapColumn",
     // "editor.wordWrapColumn": 80,
+    // "editor.wrappingIndent": "none",
+    // "editor.wrappingIndent": "none",
+    // "editor.wordWrapColumn": 80,
+    "editor.wordWrapColumn": 70,
     "editor.wrappingIndent": "none",
+    "editor.minimap.maxColumn": 70,
+    "evenBetterToml.formatter.columnWidth": 80,
+    "editor.rulers": [
+        { "color": "#FFFF0088", "column": 70 },
+    ],
     // "editor.wrappingStrategy": "advanced",
     // "latex-workshop.latex.recipes": [
     //     {
