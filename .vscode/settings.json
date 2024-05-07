@@ -47,5 +47,31 @@
         "old_thesis.bib.txt": true,
         "thesis.tex": true,
     },
-    "powershell.debugging.createTemporaryIntegratedConsole": true
+    "powershell.debugging.createTemporaryIntegratedConsole": true,
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "dummy",
+            "tools": []
+        },
+        // // // {
+        // // //     "name": "xelatex -> bibtex -> xelatex*2",
+        // // //     "tools": [
+        // // //         "xelatex",
+        // // //         "bibtex",
+        // // //         "xelatex",
+        // // //         "xelatex"
+        // // //     ],
+        // // // },
+        // // // {
+        // // //     "name": "latexmk-xelatex",
+        // // //     "tools": [
+        // // //         "latexmk-xelatex"
+        // // //     ]
+        // // // },
+        // // // { "name": "XeLaTeX",  "tools": ["xelatex"] },
+        /* { "name": "PDFLaTeX", "tools": ["pdflatex"] }, */
+        /* { "name": "BibTeX",   "tools": ["bibtex"] },   */
+        /* { "name": "LaTeXmk",  "tools": ["latexmk"] },  */
+        /* { "name": "pdflatex -> bibtex -> pdflatex*2", "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"] }, */
+    ],
 }
