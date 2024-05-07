@@ -1,0 +1,61 @@
+%%%% Common Symbol %%%%
+\newcommand*{\Nb}{\mathbb{N}}
+\newcommand*{\Zb}{\mathbb{Z}}
+\newcommand*{\Qb}{\mathbb{Q}}
+\newcommand*{\Rb}{\mathbb{R}}
+\newcommand*{\Cb}{\mathbb{C}}
+\newcommand*{\Eb}{\mathbb{E}}
+
+\newcommand*{\Ac}{\mathcal{A}}
+\newcommand*{\Dc}{\mathcal{D}}
+\newcommand*{\Oc}{\mathcal{O}}
+\newcommand*{\Tc}{\mathcal{T}}
+\newcommand*{\Uc}{\mathcal{U}}
+\newcommand*{\Vc}{\mathcal{V}}
+\newcommand*{\Xc}{\mathcal{X}}
+\newcommand*{\Yc}{\mathcal{Y}}
+\newcommand*{\Zc}{\mathcal{Z}}
+\newcommand*{\trans}{\mathsf{T}}
+
+%%%% mapping Symbol %%%%
+\newcommand*\bij{\lhook\joinrel\twoheadrightarrow}
+\newcommand*\oneto{\hookrightarrow}
+\newcommand*\onto{\twoheadrightarrow}
+\newcommand*\isoto{\xrightarrow{\sim}}
+\newcommand*\acts{\curvearrowright}
+\newcommand*\revacts{\curvearrowleft}
+
+%%%% set definition %%%%
+% just to make sure it exists
+\providecommand\given{}
+% can be useful to refer to this outside \Set
+\newcommand*\SetSymbol[1][]{%
+  \nonscript\:#1\vert
+  \allowbreak
+  \nonscript\:
+\mathopen{}}
+\DeclarePairedDelimiterX\Set[1]\{\}{%
+  \renewcommand\given{\SetSymbol[\delimsize]}
+  \,#1\,
+}
+
+%%%% Probability and Statistics Notations %%%%
+\DeclarePairedDelimiterXPP{\KL}[2]{D_\text{KL}}\lbrack\rbrack{}{{#1} \delimsize\Vert {#2}}
+\DeclarePairedDelimiterXPP{\Prob}[1]{\Pb}\lbrace\rbrace{}{#1}
+\DeclarePairedDelimiterXPP{\Ev}[1]{\Eb}\lbrack\rbrack{}{#1}
+\DeclarePairedDelimiterXPP{\Evr}[2]{\Eb_{#1}}\lbrack\rbrack{}{#2}
+
+%%%%%%%%symbol and function settings%%%%%%%%%
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\inpd}{\langle}{\rangle} % inner product
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\newcommand*{\bv}[1]{\mathbf{#1}}
+
+%% some function name
+\DeclareMathOperator{\ELBO}{ELBO}
+\DeclareMathOperator{\ReLU}{ReLU}
+

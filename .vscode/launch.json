@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        // {
+        //     "name": "Python Debugger: Current File",
+        //     "type": "debugpy",
+        //     "request": "launch",
+        //     "program": "${file}",
+        //     "console": "integratedTerminal",
+        //     "preLaunchTask": {
+        //         "task": "",
+        //         "type": ""
+        //     }
+        // },
+        // {
+        //     "name": "PowerShell Attach to Host Process",
+        //     "type": "PowerShell",
+        //     "request": "attach"
+        // },
+        {
+            "name": "PowerShell Launch Script",
+            "type": "PowerShell",
+            "request": "launch",
+            // "script": "enter path or command to execute e.g.: ${workspaceFolder}/src/foo.ps1 or Invoke-Pester",
+            // C:\Users\JeffChen\WDesk\More\Selfdone.ps1
+            "script": "C:\\Users\\JeffChen\\WDesk\\More\\Selfdone.ps1",
+            "cwd": "${cwd}",
+            "createTemporaryIntegratedConsole": true,
+        }
+    ]
+}

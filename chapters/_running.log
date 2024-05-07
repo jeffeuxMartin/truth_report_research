@@ -1,0 +1,13 @@
+❯ '/storage/LabJob/Projects/UnitTokenAnalysis/PurityCalculation/srcs/runner.sh'
+  ref pur    hyp pur    H(ref)    H(hyp)      MI    MI/H(ref)    ref segL    hyp segL  p_xy shape      frm tot    frm diff    utt tot    utt miss
+---------  ---------  --------  --------  ------  -----------  ----------  ----------  ------------  ---------  ----------  ---------  ----------
+   0.6474     0.1644    3.3152    5.2681  2.0849       0.6289      4.8935      1.8124  (41, 200)      18088299          89      28539           0
+/storage/LabJob/Projects/UnitTokenAnalysis/PurityCalculation/srcs/runner.sh: 列 26: 00：命令找不到
+❯ if [[ 1 = 0 ]]; then
+echo hi; fi
+  21:17:38   s3prl_env /storage/LabJob/Projects/UnitTokenAnalysis ····················································
+  21:17:38   s3prl_env /storage/LabJob/Projects/UnitTokenAnalysis ······················································································· ☑ 2   92% 
+  21:17:38   s3prl_env /storage/LabJob/Projects/UnitTokenAnalysis ····································································································
+❯ '/storage/LabJob/Projects/UnitTokenAnalysis/PurityCalculation/srcs/runner.sh'
+  21:28:05   s3prl_env /storage/LabJob/Projects/UnitTokenAnalysis ························································································································ ✘ INT ☑ 2   92%   140.112.21.14
+❯ 

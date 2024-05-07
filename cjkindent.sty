@@ -1,0 +1,31 @@
+% https://liam.page/2013/05/15/LaTeX-Chinese-parindent/
+
+\ProvidesPackage{cjkindent}
+%-----字寬/縮進-----
+%----CJK字符寬度
+%\f@size = 當前字符大小數值（pt/pt）
+%\p@ = 1pt
+\def\elegant@CJKChar@size{\hskip \f@size \p@}
+%----定義字寬
+%字寬 = 字符寬度 + 字符間距 = 相鄰字符中心的間距
+\newdimen\elegant@CJKChar@size@dimen
+\settowidth\elegant@CJKChar@size@dimen{\elegant@CJKChar@size\CJKglue}
+%----用戶接口
+%負責刷新字寬和段落縮進
+\newcommand{\CJKsetfontspace}{
+%刷新字寬
+\settowidth\elegant@CJKChar@size@dimen{\elegant@CJKChar@size\CJKglue}%
+%刷新段落縮進
+%判斷段落縮進是否被設置爲0（如果是表示要求不縮進）
+\ifdim\parindent=0pt%
+\relax%
+\else%
+\parindent2\elegant@CJKChar@size@dimen%
+\fi%
+}
+\newcommand{\CJKindent}{\CJKsetfontspace\parindent2\elegant@CJKChar@size@dimen}
+\newcommand{\noCJKindent}{\parident\z@}
+%----自動執行
+%\RequirePackage{indentfirst}
+%\AtBeginDocument{\CJKindent}
+%-----字寬/縮進-----
