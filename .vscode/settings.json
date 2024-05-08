@@ -1,33 +1,42 @@
 {
     "files.exclude": {
-        "CURRENT_PROGRESS.pdf": true,
-        "**/*.synctex.gz": true,
-        "**/latexmkrc": true,
-        "**/*.bbl": true,
-        "**/OLDDrafts": true,
-        "**/CORES": true,
-        // "**/.vscode": true,
-        "**/*.aux": true,
-        "**/*.out": true,
-        "**/*.toc": true,
-        "**/*.log": true,
-        "**/*.blg": true,
-        "**/*.synctex(busy)": true,
-        "**/main_attached.pdf": true,
-        "**/main_attached.tex": true,
-        "**/main.tex": true,
-        ////////////////////////
-        "Makefile": true,
-        // "README.md": true,
-        // "thesis.synctex.gz": true,
+        // "CURRENT_PROGRESS.pdf": true,
+        // "**/*.synctex.gz": true,
+        // "**/latexmkrc": true,
+        // "**/*.bbl": true,
+        // "**/OLDDrafts": true,
+        // "**/CORES": true,
+        // // "**/.vscode": true,
+        // "**/*.aux": true,
+        // "**/*.out": true,
+        // "**/*.toc": true,
+        // "**/*.log": true,
+        // "**/*.blg": true,
+        // "**/*.synctex(busy)": true,
+        // "**/main_attached.pdf": true,
+        // "**/main_attached.tex": true,
+        // "**/main.tex": true,
+        // ////////////////////////
+        // "Makefile": true,
+        // // "README.md": true,
+        // // "thesis.synctex.gz": true,
+        // "thesis.tex": true,
         
-
-        
-        
-        
-        
-        
+        "thesis.bbl": true,
+        "thesis.synctex.gz": true,
         "thesis.tex": true,
+        "utils": true,
+        "fonts": true,
+        "_scripts": true,
+        ".vscode": true,
+        "*.sty": true,
+        "*.cls": true,
+        ".gitignore": true,
+        
+        
+        
+        
+        
     },
     "powershell.debugging.createTemporaryIntegratedConsole": true,
     // "editor.fontSize": 13,
