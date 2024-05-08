@@ -1,6 +1,7 @@
 {
     "version": "2.0.0",
     "tasks": [
+        // https://code.visualstudio.com/docs/editor/tasks
         {
             "label": "gitAddCommitPush",
             "type": "shell",
@@ -8,6 +9,15 @@
             "problemMatcher": [],
             "promptOnClose": true,
             "isBackground": false,
+            "presentation": {
+                "echo": true,
+                "showReuseMessage": false,
+                "reveal": "never",
+                // "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "clear": false
+            }
         },
     ],
 }
