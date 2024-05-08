@@ -6,7 +6,7 @@
             "type": "shell",
             "command": "git add -A; git commit -m \"`date`\"; git push; exit",
             "problemMatcher": [],
-            "promptOnClose": false,
+            "promptOnClose": true,
             "isBackground": true
         },
     ],
