@@ -12,7 +12,7 @@
             "presentation": {
                 "echo": true,
                 "showReuseMessage": true,
-                "reveal": "silent",
+                "reveal": "never",
                 // "reveal": "always",
                 "revealProblems": "onProblem",
                 "focus": false,
