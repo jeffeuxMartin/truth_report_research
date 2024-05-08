@@ -11,9 +11,10 @@
             "isBackground": false,
             "presentation": {
                 "echo": true,
-                "showReuseMessage": false,
-                "reveal": "never",
+                "showReuseMessage": true,
+                "reveal": "silent",
                 // "reveal": "always",
+                "revealProblems": "onProblem",
                 "focus": false,
                 "panel": "shared",
                 "clear": false
