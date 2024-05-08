@@ -49,7 +49,7 @@
     },
     "powershell.debugging.createTemporaryIntegratedConsole": true,
     // "editor.fontSize": 13,
-    "editor.fontSize": 14,
+    "editor.fontSize": 17,
     "editor.wordWrap": "wordWrapColumn",
     // "editor.wordWrap": "wordWrapColumn",
     // "editor.wordWrapColumn": 80,
