@@ -7,7 +7,7 @@
             "command": "git add -A; git commit -m \"`date`\"; git push; exit",
             "problemMatcher": [],
             "promptOnClose": true,
-            "isBackground": true
+            "isBackground": false,
         },
     ],
 }
