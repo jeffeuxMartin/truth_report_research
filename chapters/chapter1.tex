@@ -68,7 +68,7 @@
 
     因此，我們藉由分析各種離散單元和人類理解語音最直接的處理層次：音位（phoneme）之間的關係，並將兩者進行各種統計上的序列比較，可以作為訓練大型語音基石模型（foundation model）的分詞（tokenization）基礎，選定最適合的表徵最為系統的輸入符記（token）。
 
-    如 \cite{wu2023wav2seq} 等作品便是首先嘗試將離散單元進行 tokenization 後做進一步處理的，其後的
+    例如 \cite{wu2023wav2seq} 等作品便是首先嘗試將離散單元進行 tokenization 後做進一步處理的，其後的
 
     % 　　在過往他們做Super Secret Unit的這些representation的當中，Purity的基本指標就是去elaborate說他們今天discover出來的那個unit本身，與Foening之間的一致性有多高，所以一定會說Purity以及PNMI這兩個指標，然後呢，他們我們就先對基本的一些unit，尤其是在Texas這個里程碑上面去做這些分析，然後接下來我們會嘗試想說就是有一個假設是，基於有文獻以及從語言學上面看到的一些現象，我們可以發掘，比如說，或許，或許，Unit itself does not represent the phonological structure at all，only，就是你會需要一個Sequence，也許Deduplication本身很重要，所以我們會比較說，如果借用文字那邊VP，就有點像從Button-up裡面去，從更fine structure的信號角度去，組成一個人類從Top-down認知的Foening這個角色之間，我們可不可以借用文字的organization演算法，去達成discovery這些東西的目的，然後一樣去分析這兩個，他們的那些資訊的角度，就是把這個單位當成新的Acoustic unit，就是Acoustic unit discovery他們在做的事情，那這就是一個簡單的分析的方式，最後我們會把它測試在Foening recognition，畢竟我們discovery如果是Foening，它應該有一個準確率，但在應用的角度上我們會做Speech recognition這樣子，因為這就能直接反應到，它有沒有抽到裡面的content，OK
 

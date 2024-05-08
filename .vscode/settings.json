@@ -17,34 +17,16 @@
         "**/main_attached.tex": true,
         "**/main.tex": true,
         ////////////////////////
-        "AUTHOR": true,
-        // "chapters": true,
-        "cjkindent.sty": true,
-        "COPYING": true,
-        "headerfooter.tex": true,
         "Makefile": true,
-        "notations.tex": true,
-        "ntu_backpages.tex": true,
-        "ntu_chnum.tex": true,
-        "ntu_definitions.tex": true,
-        "ntu_frontpages.tex": true,
-        "ntuthesis.cls": true,
-        "ntuthesis.sty": true,
-        "README.md": true,
-        "thesis.bbl": true,
-        // "thesis.bib": true,
-        // "thesis.pdf": true,
-        "thesis.synctex.gz": true,
-        "thesis_backpages.tex": true,
-        "thesis_frontpages.tex": true,
-        "title_settings.tex": true,
-        "watermark.pdf": true,
-        "watermark.tex": true,
+        // "README.md": true,
+        // "thesis.synctex.gz": true,
         
-        "REALthesis.tex.txt": true,
-        // "REALthesis.tex.txt": true,
 
-        "old_thesis.bib.txt": true,
+        
+        
+        
+        
+        
         "thesis.tex": true,
     },
     "powershell.debugging.createTemporaryIntegratedConsole": true,

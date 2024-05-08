@@ -69,30 +69,30 @@ commentstyle=\upshape,% 預設是斜體字，會影響註解裏的英文，改�
 %% 浮水印 >>> 
 % 請用 Adobe Acrobat 加入
 % 也會需要加入 doi 的浮水印
-%\input{watermark}
+%\input{utils/watermark}
 %% <<< 浮水印
 
 % 如需額外的頁楣 (header) 或 footer，請在 headerfooter.tex 裡依例修改
 % 它的預設內容是都關掉，可依需要打開
-\input{headerfooter}
+\input{utils/headerfooter}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % 常見的 notation 指令
 % 請修改 notations.tex 加入自己需要的 notations
-\input{notations}
+\input{utils/notations}
 
 % Title Page
 % 請修改 title_settings.tex 設定論文題目/指導教授等變數
-\input{title_settings}
+\input{utils/title_settings}
 
 % 載入中文名詞的定義：例如，Figure -->「圖」, Chapter -->「第 x 章」
-\input{ntu_definitions}
+\input{utils/ntu_definitions}
 
 % 如果不需要以中文數字一、二、三呈現章別，例如「第一章」
 % 則請把下列介於 >>> 與 <<< 之間
 % 的文字行關掉 (行首加上百分號), 會以「第 1 章」呈現
 %% 中文數字章別 >>>
-\input{ntu_chnum}
+\input{utils/ntu_chnum}
 %% <<< 中文數字章別
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -104,8 +104,8 @@ commentstyle=\upshape,% 預設是斜體字，會影響註解裏的英文，改�
 
 %%% 以下載入前頁、本文、後頁
 
-\input{thesis_frontpages}
+\input{utils/thesis_frontpages}
 \input{chapters/all}
-\input{thesis_backpages}
+\input{utils/thesis_backpages}
 
 \end{document}
