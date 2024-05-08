@@ -5,7 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python Debugger: LatexFile",
+            "name": "Sync Git Update: LatexFile",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${cwd}/running_latex.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Git Update: LatexFile",
             "type": "debugpy",
             "request": "launch",
             "program": "${cwd}/runnn_py_latex.py",
