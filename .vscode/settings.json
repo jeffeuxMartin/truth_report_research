@@ -87,5 +87,6 @@
     // ],
     "workbench.colorTheme": "Astral Green 🪐",
     "editor.suggest.showReferences": false,
+    "workbench.action.tasks.terminate": true,
     
 }
