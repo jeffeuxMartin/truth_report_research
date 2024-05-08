@@ -1,0 +1,11 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "gitAddCommitPush",
+            "type": "shell",
+            "command": "git add -A; git commit -m \"`date`\"; git push; exit",
+            "problemMatcher": []
+        }
+    ]
+}
