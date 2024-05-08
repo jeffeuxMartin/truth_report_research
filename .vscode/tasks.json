@@ -17,7 +17,8 @@
                 "revealProblems": "onProblem",
                 "focus": false,
                 "panel": "shared",
-                "clear": false
+                "clear": false,
+                "close": true,
             }
         },
     ],
