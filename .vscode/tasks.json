@@ -16,7 +16,7 @@
                 // "reveal": "always",
                 "revealProblems": "onProblem",
                 "focus": false,
-                "panel": "shared",
+                "panel": "new",
                 "clear": false,
                 "close": true,
             }
