@@ -85,4 +85,5 @@
     //     /* { "name": "LaTeXmk",  "tools": ["latexmk"] },  */
     //     /* { "name": "pdflatex -> bibtex -> pdflatex*2", "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"] }, */
     // ],
+    "workbench.colorTheme": "Astral Green 🪐",
 }
