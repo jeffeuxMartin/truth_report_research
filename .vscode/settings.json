@@ -92,5 +92,12 @@
     "workbench.action.tasks.terminate": true,
     "editor.suggestFontSize": 0,
     "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "editor.wordBasedSuggestions": "off",
+    "editor.suggest.showWords": false,
+    // "editor.fontWeight": "bold",
+    "editor.fontWeight": 550,
+    // "editor.fontFamily": "'Times New Roman', 標楷體, Consolas, 'Courier New', monospace",
+    // "editor.fontFamily": "'Serif', 標楷體, Consolas, 'Courier New', monospace",
+    "editor.fontFamily": "'Calibri', 標楷體, Consolas, 'Courier New', monospace",
     
 }
