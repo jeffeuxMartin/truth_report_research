@@ -165,7 +165,8 @@ commentstyle=\upshape,% 預設是斜體字，會影響註解裏的英文，改�
 \newpage
 \phantomsection % for hyperref to register this
 \addcontentsline{toc}{chapter}{\nameRef}
-\renewcommand{\bibname}{\protect\makebox[5cm][s]{\nameRef}}
+\renewcommand{\bibname}{\protect\makebox[3.5cm][s]{\nameRef}}  % fixed by JEFF
+% \renewcommand{\bibname}{\protect\makebox[5cm][s]{\nameRef}}  % original
 %  \makebox{} is fragile; need protect
 \bibliographystyle{IEEEtran}  % 使用 IEEE Trans 期刊格式
 \bibliography{thesis}
