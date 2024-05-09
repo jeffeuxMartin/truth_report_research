@@ -9,9 +9,31 @@
 \setCJKsansfont[BoldFont=Noto Serif CJK TC Bold]{Noto Serif CJK TC Light}
 \setCJKmonofont[BoldFont=Noto Serif CJK TC Bold]{Noto Serif CJK TC Light}
 \newCJKfontfamily\zhKaiFont{AR PL UKai TW}
-\setmainfont{Nimbus Roman}       % fixed by JEFF & ChatGPT Plus
+% \setmainfont{Nimbus Roman}       % fixed by JEFF & ChatGPT Plus
 % \setmainfont{Nimbus Roman No9}   % fixed by JEFF & ChatGPT Plus
 % \setmainfont{Nimbus Roman No9 L}   % fixed by JEFF & ChatGPT Plus
+% \setmainfont{Nimbus Roman}[ 
+%   BoldFont = * Bold,
+%   ItalicFont = * Italic,
+%   BoldItalicFont = * Bold Italic
+% ]
+% \setmainfont{Nimbus Roman}[
+% %   Path = /usr/share/fonts/opentype/urw-base35/,  % Adjust the path if needed
+%   Extension = .otf,
+%   UprightFont = *-Regular,
+%   BoldFont = *-Bold,
+%   ItalicFont = *-Italic,
+%   BoldItalicFont = *-BoldItalic
+% ]
+\IfFontExistsTF{Nimbus Roman No9 L}{
+  \setmainfont{Nimbus Roman No9 L} % If Nimbus Roman No9 L is available
+}{
+  \IfFontExistsTF{Nimbus Roman}{
+    \setmainfont{Nimbus Roman} % Fallback to Nimbus Roman if available
+  }{
+    \setmainfont{Latin Modern Roman} % Default if none of the above is available
+  }
+}
 \usepackage{cjkindent}
 
 \newcommand{\enThesisType}{Master}
