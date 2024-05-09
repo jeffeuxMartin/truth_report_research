@@ -24,7 +24,6 @@
         
         "thesis.bbl": true,
         "thesis.synctex.gz": true,
-        "thesis.tex": true,
         "utils": true,
         "fonts": true,
         "_scripts": true,
@@ -33,6 +32,7 @@
         "*.cls": true,
         ".gitignore": true,
         
+        "thesis.tex": false,
         
         "chapters/all.tex": true,
         // "chapters/chapter0.tex": true,
@@ -89,5 +89,6 @@
     "editor.suggest.showReferences": false,
     "workbench.action.tasks.terminate": true,
     "editor.suggestFontSize": 0,
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
     
 }
