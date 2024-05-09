@@ -5,7 +5,19 @@
 \usepackage{mathspec}
 \usepackage[CheckSingle]{xeCJK}
 \usepackage{zhnumber}
-\setCJKmainfont[BoldFont=Noto Serif CJK TC Bold]{Noto Serif CJK TC Light}
+% \setCJKmainfont[BoldFont=Noto Serif CJK TC Bold]{Noto Serif CJK TC Light}
+%%%%%%%%%%%%%%%%%%%% fixed by JEFF & ChatGPT Plus %%%%%%%%%%%%%%%%%%%%
+\newcommand{\ntu@path@font}{./fonts/english/}
+\newcommand{\ntu@path@cjkfont}{./fonts/chinese/}
+% \setCJKmainfont[BoldFont=Kaiti Bold]{Kaiti Light}[
+% 	Path = ./fonts/chinese/,
+% ]
+\setCJKmainfont{BiauKai}[
+    Path = \ntu@path@cjkfont ,
+    Extension = .ttf ,
+    BoldFont = Kaiti-Black, ]
+% ================== fixed by JEFF & ChatGPT Plus ================== %
+
 \setCJKsansfont[BoldFont=Noto Serif CJK TC Bold]{Noto Serif CJK TC Light}
 \setCJKmonofont[BoldFont=Noto Serif CJK TC Bold]{Noto Serif CJK TC Light}
 \newCJKfontfamily\zhKaiFont{AR PL UKai TW}
