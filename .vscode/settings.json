@@ -1,103 +1,26 @@
 {
     "files.exclude": {
-        // "CURRENT_PROGRESS.pdf": true,
-        // "**/*.synctex.gz": true,
-        // "**/latexmkrc": true,
-        // "**/*.bbl": true,
-        // "**/OLDDrafts": true,
-        // "**/CORES": true,
-        // // "**/.vscode": true,
-        // "**/*.aux": true,
-        // "**/*.out": true,
-        // "**/*.toc": true,
-        // "**/*.log": true,
-        // "**/*.blg": true,
-        // "**/*.synctex(busy)": true,
-        // "**/main_attached.pdf": true,
-        // "**/main_attached.tex": true,
-        // "**/main.tex": true,
-        // ////////////////////////
-        // "Makefile": true,
-        // // "README.md": true,
-        // // "thesis.synctex.gz": true,
-        // "thesis.tex": true,
-        
         "thesis.bbl": true,
         "thesis.synctex.gz": true,
         "utils": true,
         "fonts": true,
         "_scripts": true,
-        ".vscode": true,
         "*.sty": true,
         "*.cls": true,
         ".gitignore": true,
-        
-        
-        // "chapters/chapter0.tex": true,
         "chapters/chapter1.tex": true,
         "chapters/chapter2.tex": true,
         "chapters/chapter3.tex": true,
         "chapters/chapter4.tex": true,
         "chapters/chapter5.tex": true,
-        
-        
-        "thesis.tex": true,
-        "chapters/all.tex": true,
-        
     },
-    "powershell.debugging.createTemporaryIntegratedConsole": true,
-    // "editor.fontSize": 13,
-    // "editor.fontSize": 23,
-    // "editor.wordWrap": "bounded",
-    "editor.wordWrap": "on",
-    // "editor.wordWrap": "wordWrapColumn",
-    // "editor.wrappingIndent": "none",
-    // "editor.wrappingIndent": "none",
-    // "editor.wordWrapColumn": 70,
+    "editor.fontSize": 18,
     "editor.wrappingIndent": "none",
-    // "editor.minimap.maxColumn": 70,
-    // "evenBetterToml.formatter.columnWidth": 80,
     "editor.rulers": [
         { "color": "#FFFF0088", "column": 70 },
     ],
-    // "editor.wrappingStrategy": "advanced",
-    // "latex-workshop.latex.recipes": [
-    //     {
-    //         "name": "dummy",
-    //         "tools": []
-    //     },
-    //     // // // {
-    //     // // //     "name": "xelatex -> bibtex -> xelatex*2",
-    //     // // //     "tools": [
-    //     // // //         "xelatex",
-    //     // // //         "bibtex",
-    //     // // //         "xelatex",
-    //     // // //         "xelatex"
-    //     // // //     ],
-    //     // // // },
-    //     // // // {
-    //     // // //     "name": "latexmk-xelatex",
-    //     // // //     "tools": [
-    //     // // //         "latexmk-xelatex"
-    //     // // //     ]
-    //     // // // },
-    //     // // // { "name": "XeLaTeX",  "tools": ["xelatex"] },
-    //     /* { "name": "PDFLaTeX", "tools": ["pdflatex"] }, */
-    //     /* { "name": "BibTeX",   "tools": ["bibtex"] },   */
-    //     /* { "name": "LaTeXmk",  "tools": ["latexmk"] },  */
-    //     /* { "name": "pdflatex -> bibtex -> pdflatex*2", "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"] }, */
-    // ],
-    "workbench.colorTheme": "Astral Green 🪐",
-    "editor.suggest.showReferences": false,
-    "workbench.action.tasks.terminate": true,
-    "editor.suggestFontSize": 0,
-    "latex-workshop.latex.autoBuild.run": "onFileChange",
     "editor.wordBasedSuggestions": "off",
-    "editor.suggest.showWords": false,
-    // "editor.fontWeight": "bold",
     "editor.fontWeight": 550,
-    // "editor.fontFamily": "'Times New Roman', 標楷體, Consolas, 'Courier New', monospace",
-    // "editor.fontFamily": "'Serif', 標楷體, Consolas, 'Courier New', monospace",
     "editor.fontFamily": "'Calibri', 標楷體, Consolas, 'Courier New', monospace",
     
 }
