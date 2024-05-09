@@ -32,15 +32,18 @@
         "*.cls": true,
         ".gitignore": true,
         
-        "thesis.tex": false,
         
-        "chapters/all.tex": true,
         // "chapters/chapter0.tex": true,
         "chapters/chapter1.tex": true,
         "chapters/chapter2.tex": true,
         "chapters/chapter3.tex": true,
         "chapters/chapter4.tex": true,
         "chapters/chapter5.tex": true,
+        
+        
+        "thesis.tex": true,
+        "chapters/all.tex": true,
+        
     },
     "powershell.debugging.createTemporaryIntegratedConsole": true,
     // "editor.fontSize": 13,
