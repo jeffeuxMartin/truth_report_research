@@ -16,6 +16,8 @@
     },
     "editor.fontSize": 18,
     "editor.wrappingIndent": "none",
+    "editor.wordWrapColumn": 70,
+    "editor.wordWrap": "bounded",
     "editor.rulers": [
         { "color": "#FFFF0088", "column": 70 },
     ],
