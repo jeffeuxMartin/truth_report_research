@@ -13,6 +13,9 @@
         "chapters/chapter3.tex": true,
         "chapters/chapter4.tex": true,
         "chapters/chapter5.tex": true,
+        //////////////////////////////
+        ".vscode": true,
+        "thesis.tex": true,
     },
     "editor.fontSize": 18,
     "editor.wrappingIndent": "none",
