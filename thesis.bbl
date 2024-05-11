@@ -58,4 +58,7 @@ S.~Ren, S.~Liu, Y.~Wu, L.~Zhou, and F.~Wei, ``Speech pre-training with acoustic 
 \bibitem{chang2024exploring}
 X.~Chang, B.~Yan, K.~Choi, J.-W. Jung, Y.~Lu, S.~Maiti, R.~Sharma, J.~Shi, J.~Tian, S.~Watanabe \emph{et~al.}, ``Exploring speech recognition, translation, and understanding with discrete speech units: A comparative study,'' in \emph{ICASSP 2024-2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2024, pp. 11\,481--11\,485.
 
+\bibitem{mcculloch1943logical}
+W.~S. McCulloch and W.~Pitts, ``A logical calculus of the ideas immanent in nervous activity,'' \emph{The bulletin of mathematical biophysics}, vol.~5, pp. 115--133, 1943.
+
 \end{thebibliography}
