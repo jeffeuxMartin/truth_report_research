@@ -1,0 +1,8 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+k ctrl+g",
+        "command": "workbench.action.tasks.runTask",
+        "args": "gitAddCommitPush"
+    },
+]

@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        // https://code.visualstudio.com/docs/editor/tasks
+        {
+            "label": "gitAddCommitPush",
+            "type": "shell",
+            "command": "git add -A; git commit -m \"`date`\"; git push; exit",
+            "problemMatcher": [],
+            "promptOnClose": true,
+            "isBackground": false,
+            "presentation": {
+                "echo": true,
+                "showReuseMessage": true,
+                "reveal": "never",
+                // "reveal": "always",
+                "revealProblems": "onProblem",
+                "focus": false,
+                "panel": "new",
+                "clear": false,
+                "close": true,
+            }
+        },
+    ],
+}

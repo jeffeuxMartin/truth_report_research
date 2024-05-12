@@ -1,0 +1,223 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{ntuthesis}[2008/07/01 v1.0 NTU thesis format]
+\usepackage[verbose,tmargin=3cm,bmargin=3cm,lmargin=3cm,rmargin=3cm,footskip=1.27cm,a4paper]{geometry}
+
+\usepackage{mathspec}
+\usepackage[CheckSingle]{xeCJK}
+\usepackage{zhnumber}
+% \setCJKmainfont[BoldFont=Noto Serif CJK TC Bold]{Noto Serif CJK TC Light}
+%%%%%%%%%%%%%%%%%%%% fixed by JEFF & ChatGPT Plus %%%%%%%%%%%%%%%%%%%%
+\newcommand{\ntu@path@font}{./fonts/english/}
+\newcommand{\ntu@path@cjkfont}{./fonts/chinese/}
+% \setCJKmainfont[BoldFont=Kaiti Bold]{Kaiti Light}[
+% 	Path = ./fonts/chinese/,
+% ]
+\setCJKmainfont{BiauKai}[
+    Path = \ntu@path@cjkfont ,
+    Extension = .ttf ,
+    BoldFont = Kaiti-Black, ]
+% ================== fixed by JEFF & ChatGPT Plus ================== %
+
+\setCJKsansfont[BoldFont=Noto Serif CJK TC Bold]{Noto Serif CJK TC Light}
+\setCJKmonofont[BoldFont=Noto Serif CJK TC Bold]{Noto Serif CJK TC Light}
+\newCJKfontfamily\zhKaiFont{AR PL UKai TW}
+%%%%%%%%%%%%%%%%%%%% fixed by JEFF & ChatGPT Plus %%%%%%%%%%%%%%%%%%%%
+% \setmainfont{Nimbus Roman}       % fixed by JEFF & ChatGPT Plus
+% \setmainfont{Nimbus Roman No9}   % fixed by JEFF & ChatGPT Plus
+% \setmainfont{Nimbus Roman No9 L}   % fixed by JEFF & ChatGPT Plus
+% \setmainfont{Nimbus Roman}[ 
+%   BoldFont = * Bold,
+%   ItalicFont = * Italic,
+%   BoldItalicFont = * Bold Italic
+% ]
+% \setmainfont{Nimbus Roman}[
+% %   Path = /usr/share/fonts/opentype/urw-base35/,  % Adjust the path if needed
+%   Extension = .otf,
+%   UprightFont = *-Regular,
+%   BoldFont = *-Bold,
+%   ItalicFont = *-Italic,
+%   BoldItalicFont = *-BoldItalic
+% ]
+\IfFontExistsTF{Nimbus Roman No9 L}{
+  \setmainfont{Nimbus Roman No9 L} % If Nimbus Roman No9 L is available
+}{
+  \IfFontExistsTF{Nimbus Roman}{
+    \setmainfont{Nimbus Roman} % Fallback to Nimbus Roman if available
+  }{
+    \setmainfont{Latin Modern Roman} % Default if none of the above is available
+  }
+}
+% ================== fixed by JEFF & ChatGPT Plus ================== %
+\usepackage{cjkindent}
+
+\newcommand{\enThesisType}{Master}
+\newcommand{\zhThesisType}{碩士}
+\newcommand{\zhDraftName}{}
+
+\DeclareOption{master}{\renewcommand{\enThesisType}{Master} \renewcommand{\zhThesisType}{碩士}}
+\DeclareOption{phd}{\renewcommand{\enThesisType}{Doctoral} \renewcommand{\zhThesisType}{博士}}
+\DeclareOption{draft}{\renewcommand{\zhDraftName}{ (初稿) }}
+
+\newcommand{\mybaselinestretch}{2}  %行距 1.5 倍 + 20%, (約為 double space
+\renewcommand{\baselinestretch}{\mybaselinestretch}  % 論文行距預設值
+
+\newcommand{\mysinglespacing}{\renewcommand{\baselinestretch}{1.18}}
+\newcommand{\myonehalfspacing}{\renewcommand{\baselinestretch}{1.5}}
+\newcommand{\mydoublespacing}{\renewcommand{\baselinestretch}{2}}
+
+\renewcommand{\listfigurename}{圖目錄}
+\renewcommand{\listtablename}{表目錄}
+\renewcommand{\bibname}{參考文獻}
+
+\newcommand{\zhCollegeName}{電機資訊學院}
+\newcommand{\zhDepartmentName}{電機工程學系}
+\newcommand{\enCollegeName}{College of Electrical Engineering and Computer Science}
+\newcommand{\enDepartmentName}{Department of Electrical Engineering}
+\newcommand{\enTitle}{Research of Keroro Alien Invadation}
+\newcommand{\zhTitle}{ケロロ 軍曹外星人入侵研究}
+\newcommand{\authorZhName}{王大明}  %作者中文姓名
+\newcommand{\authorEnName}{Da-ming Wang}  %作者英文姓名
+\newcommand{\authorStudentID}{R123456789}  %作者學號
+\newcommand{\advisorZhName}{日向冬樹}%指導教授中文姓名
+\newcommand{\advisorEnName}{Fuyuki Hinata}  %指導教授英文姓名
+\newcommand{\rocYear}{九十七}  %中華民國紀年年份
+\newcommand{\zhMonth}{六}  %中文月份
+\newcommand{\enYear}{2008}  %公元紀年
+\newcommand{\enMonth}{June}  %英文月份
+\newcommand{\oralDate}{97年7月1日}  %口試日期
+
+\newenvironment{acknowledgement}{\newpage \begin{center}
+	\LARGE \zhKaiFont 誌謝
+\end{center}
+\phantomsection
+\addcontentsline{toc}{chapter}{誌謝}
+\vspace{12pt}
+\par
+\CJKindent
+}{}
+
+\newenvironment{enAbstract}{\newpage \begin{center}
+	\Large Abstract
+\end{center}
+\phantomsection
+\addcontentsline{toc}{chapter}{英文摘要}
+\vspace{12pt}
+\par
+\noindent 
+}{}
+
+\newenvironment{zhAbstract}{\newpage \begin{center}
+	\LARGE \zhKaiFont 摘要
+\end{center}
+\phantomsection
+\addcontentsline{toc}{chapter}{中文摘要}
+\vspace{12pt}
+\par
+\CJKindent
+}{}
+
+\newcommand{\NTUtitlepage}{\begin{titlepage}%
+	\newgeometry{top=4cm,bottom=2.5cm}%
+	\zhKaiFont%
+	\begin{center}
+		{
+			\fontsize{18pt}{18pt}\linespread{1.5}\selectfont
+			國立臺灣大學\zhCollegeName{}\zhDepartmentName{} \\
+			\zhThesisType{}論文 \zhDraftName{}
+			\par
+		}
+		{
+			\fontsize{14pt}{14pt}\linespread{1.5}\selectfont
+			\enDepartmentName{} \\
+			\enCollegeName{}
+			\par
+		}
+		{
+			\fontsize{16pt}{16pt}\linespread{1.5}\selectfont
+			National Taiwan University \\
+			\enThesisType{} Thesis
+			\par
+		}
+		\vfill
+		{ 
+			\fontsize{18pt}{18pt}\linespread{1.5}\selectfont
+			\zhTitle \\
+			\enTitle
+			\par
+		}
+		\vfill
+		{
+			\fontsize{18pt}{18pt}\linespread{1.5}\selectfont
+			\authorZhName \\
+			\authorEnName
+			\par
+		}
+		\vfill
+		{
+			\fontsize{18pt}{18pt}\linespread{1.5}\selectfont
+			指導教授：\advisorZhName{} 教授 \\
+			Advisor: \advisorEnName{}, Ph.D.
+			\par
+		}
+		\vfill
+		{
+			\fontsize{18pt}{18pt}\linespread{1.5}\selectfont
+			中華民國\rocYear 年\zhMonth 月 \\
+			\enMonth\ \enYear
+			\par
+		}
+	\end{center}
+\end{titlepage}
+\restoregeometry%
+}
+
+\newcommand{\NTUoralpage}{\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{口試委員會審定書}
+\vspace{1cm}
+\begin{center}
+	{
+		\zhKaiFont
+		\mysinglespacing\selectfont
+		\huge
+		國立臺灣大學\zhThesisType{}學位論文
+		\par
+	}
+	{
+		\zhKaiFont
+		\fontsize{26pt}{18pt}\selectfont
+		口試委員會審定書
+		\par
+	}
+	\medskip
+	{
+		\zhKaiFont
+		\fontsize{20pt}{20pt}\linespread{1.5}\selectfont
+		\zhTitle \\
+		\enTitle
+		\par
+	}
+\end{center}
+\par\bigskip
+{
+	\fontsize{16pt}{16pt}\linespread{1.5}\selectfont \zhKaiFont
+	\CJKindent 本論文係\authorZhName{}君（學號 \authorStudentID{}）在國立臺灣大學\zhDepartmentName{}完成之\zhThesisType{}學位論文，於民國 \oralDate{}承下列考試委員審查通過及口試及格，特此證明
+	\par
+}
+\vfill
+{
+	\mysinglespacing\selectfont
+	\fontsize{16pt}{16pt}\selectfont \zhKaiFont
+	\noindent 口試委員： \par
+	\hfill\underline{\hspace{17em}（簽名）} \par
+	\hspace{11em}（指導教授）\vspace{25pt} \par
+	\hfill\underline{\hspace{9em}}\hspace{2.95em}\underline{\hspace{9em}}\vspace{20pt} \par
+	\hfill\underline{\hspace{9em}}\hspace{2.95em}\underline{\hspace{9em}}\vspace{20pt} \par
+	\hfill\underline{\hspace{9em}}\hspace{2.95em}\underline{\hspace{9em}}\vspace{20pt} \par
+	\hfill\underline{\hspace{9em}}\hspace{2.95em}\underline{\hspace{9em}}\vspace{40pt} \par
+	\noindent 系主任、所長\hfill\underline{\hspace{16em}（簽名）}\vspace*{40pt} \par
+}
+}
+
+\ExecuteOptions{master}
+\ProcessOptions\relax
