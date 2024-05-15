@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.3)  15 MAY 2024 20:37
-=======
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.3)  15 MAY 2024 19:40
->>>>>>> d6a3a07 (Restructure files)
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -905,7 +901,6 @@ Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 \f@nch@O@erf=\skip83
 \f@nch@O@olf=\skip84
 \f@nch@O@orf=\skip85
-<<<<<<< HEAD
 ) (./_scripts/utils/headerfooter.tex) (./_scripts/utils/title_settings.tex) (./_scripts/utils/ntu_definitions.tex) (./_scripts/utils/ntu_chnum.tex)
 Package translations Info: No language package found. I am going to use `english' as default language. on input line 108.
 
@@ -990,51 +985,60 @@ Package translations Info: loading dictionary `translations-basic-dictionary' fo
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count391
-(./chapters/total.tex
+(./chapters/total.tex (./_scripts/materials/helpers/tedious_cmds.tex) (./chapters/CCC_chapter2_and_3.tex
+./chapters/CCC_chapter2_and_3.tex:2: Undefined control sequence.
+l.2 \mychcnt
+            {3}\chapter{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-! LaTeX Error: File `_scripts/materials/helpers/tedious_cmds.tex' not found.
-=======
-)
+[1
 
-! LaTeX Error: File `_scripts/utils/headerfooter.tex' not found.
->>>>>>> d6a3a07 (Restructure files)
+]
+Chapter 2.
+./chapters/CCC_chapter2_and_3.tex:20: Undefined control sequence.
+l.20 \mychcnt
+             {2}\chapter{背景知識}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[2
+
+] [3]
+Chapter 3.
+
+LaTeX Warning: Citation `mcculloch1943logical' on page 4 undefined on input line 23.
+
+[4
+
+] [5])
+
+! LaTeX Error: File `chapters/chapter2.tex' not found.
 
 Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: tex)
 
 Enter file name: 
-<<<<<<< HEAD
-./chapters/total.tex:3: Emergency stop.
+./chapters/total.tex:14: Emergency stop.
 <read *> 
          
-l.3 ...ut{_scripts/materials/helpers/tedious_cmds}
-                                                  ^^M
-=======
-/storage/LabJob/Projects/truth_report_research/thesis.tex:83: Emergency stop.
-<read *> 
-         
-l.83 \input{_scripts/utils/headerfooter}
-                                        ^^M
->>>>>>> d6a3a07 (Restructure files)
+l.14 \input{chapters/chapter2}
+                              ^^M
 *** (cannot \read from terminal in nonstop modes)
 
  
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 35009 strings out of 476675
- 769414 string characters out of 5803799
- 1844296 words of memory out of 5000000
- 54737 multiletter control sequences out of 15000+600000
- 513341 words of font info for 52 fonts, out of 8000000 for 9000
+ 35264 strings out of 476675
+ 784162 string characters out of 5803799
+ 1861296 words of memory out of 5000000
+ 54974 multiletter control sequences out of 15000+600000
+ 513429 words of font info for 63 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 101i,1n,105p,498b,399s stack positions out of 10000i,1000n,20000p,200000b,200000s
-=======
- 34591 strings out of 476675
- 753156 string characters out of 5803799
- 1844296 words of memory out of 5000000
- 54344 multiletter control sequences out of 15000+600000
- 513341 words of font info for 52 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 101i,0n,105p,498b,262s stack positions out of 10000i,1000n,20000p,200000b,200000s
->>>>>>> d6a3a07 (Restructure files)
-No pages of output.
+ 101i,11n,105p,498b,790s stack positions out of 10000i,1000n,20000p,200000b,200000s
+Output written on thesis.pdf (5 pages).
