@@ -805,85 +805,6 @@ Package: zhnumber 2022/07/14 v3.0 Typesetting numbers with Chinese glyphs
 File: zhnumber-utf8.cfg 2022/07/14 v3.0 Chinese numerals with UTF8 encoding
 ))
 
-./ntuthesis.sty:18: Package fontspec Error: The font "BiauKai" cannot be found.
-
-For immediate help type H <return>.
- ...                                              
-                                                  
-l.18     BoldFont = Kaiti-Black, ]
-                                  
-
-A font might not be found for many reasons.
- Check the spelling, where the font is installed etc. etc.
-
- When in doubt, ask someone for help!
-
-
-
-Package fontspec Warning: Font "BiauKai" does not contain requested Script
-(fontspec)                "CJK".
-
-
-./ntuthesis.sty:18: Package fontspec Error: The font "BiauKai" cannot be found.
-
-For immediate help type H <return>.
- ...                                              
-                                                  
-l.18     BoldFont = Kaiti-Black, ]
-                                  
-
-A font might not be found for many reasons.
- Check the spelling, where the font is installed etc. etc.
-
- When in doubt, ask someone for help!
-
-
-
-./ntuthesis.sty:18: Package fontspec Error: The font "BiauKai" cannot be found.
-
-For immediate help type H <return>.
- ...                                              
-                                                  
-l.18     BoldFont = Kaiti-Black, ]
-                                  
-
-A font might not be found for many reasons.
- Check the spelling, where the font is installed etc. etc.
-
- When in doubt, ask someone for help!
-
-
-
-./ntuthesis.sty:18: Package fontspec Error: The font "Kaiti-Black" cannot be found.
-
-For immediate help type H <return>.
- ...                                              
-                                                  
-l.18     BoldFont = Kaiti-Black, ]
-                                  
-
-A font might not be found for many reasons.
- Check the spelling, where the font is installed etc. etc.
-
- When in doubt, ask someone for help!
-
-
-
-./ntuthesis.sty:18: Package fontspec Error: The font "Kaiti-Black" cannot be found.
-
-For immediate help type H <return>.
- ...                                              
-                                                  
-l.18     BoldFont = Kaiti-Black, ]
-                                  
-
-A font might not be found for many reasons.
- Check the spelling, where the font is installed etc. etc.
-
- When in doubt, ask someone for help!
-
-
-
 Package fontspec Info: Font family 'BiauKai(0)' created for font 'BiauKai'
 (fontspec)             with options
 (fontspec)             [Script={CJK},Path={./_scripts/fonts/chinese/},Extension={.ttf},BoldFont={Kaiti-Black}].
@@ -892,13 +813,11 @@ Package fontspec Info: Font family 'BiauKai(0)' created for font 'BiauKai'
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[./_scripts/fonts/chinese/BiauKai.ttf]/OT"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->"[./_scripts/fonts/chinese/BiauKai.ttf]/OT"
+(fontspec)             <->"[./_scripts/fonts/chinese/BiauKai.ttf]/OT:script=hani;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[./_scripts/fonts/chinese/Kaiti-Black.ttf]/OT"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->"[./_scripts/fonts/chinese/Kaiti-Black.ttf]/OT"
+(fontspec)             <->"[./_scripts/fonts/chinese/Kaiti-Black.ttf]/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 
 Package fontspec Info: Font family 'NimbusRomanNo9L(0)' created for font
@@ -920,7 +839,7 @@ Package fontspec Info: Font family 'NimbusRomanNo9L(0)' created for font
 (fontspec)             Roman No9 L/BI/OT:language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
-(./cjkindent.sty
+ (./cjkindent.sty
 Package: cjkindent 
 \elegant@CJKChar@size@dimen=\dimen345
 )) (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
@@ -982,28 +901,237 @@ Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 \f@nch@O@erf=\skip83
 \f@nch@O@olf=\skip84
 \f@nch@O@orf=\skip85
-)
+) (./_scripts/utils/headerfooter.tex) (./_scripts/utils/title_settings.tex) (./_scripts/utils/ntu_definitions.tex) (./_scripts/utils/ntu_chnum.tex)
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 108.
 
-! LaTeX Error: File `_scripts/utils/headerfooter.tex' not found.
+No file thesis.aux.
+\openout1 = `thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 108.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 108.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: rotating package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring ON on input line 108.
+\@outlinefile=\write4
+\openout4 = `thesis.out'.
+
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 108.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=674.33032pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-23.91173pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=36.13512pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\c@lstlisting=\count391
+(./chapters/total.tex (./_scripts/materials/helpers/tedious_cmds.tex) (./chapters/CCC_chapter2_and_3.tex
+./chapters/CCC_chapter2_and_3.tex:2: Missing $ inserted.
+<inserted text> 
+                $
+l.2 <<<<<<<< HEAD:chapters/CCC_
+                               chapter2_and_3.tex
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+./chapters/CCC_chapter2_and_3.tex:6: Missing $ inserted.
+<inserted text> 
+                $
+l.6 \mychcnt{3}\chapter
+                       {
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (5.39719pt too wide) in paragraph at lines 7--6
+[]\TU/NimbusRomanNo9L(0)/m/n/12 «««< HEAD «««< HEAD «««« HEAD:chapters/CCC$[]\OML/cmm/m/it/12 hapter\OT1/cmr/m/n/12 2[]\OML/cmm/m/it/12 nd[]:tex <<<<<<<
+ []
+
+
+Overfull \hbox (74.39668pt too wide) in paragraph at lines 7--6
+\OML/cmm/m/it/12 HEAD \OT1/cmr/m/n/12 : \OML/cmm/m/it/12 chapters=CCC[]hapter\OT1/cmr/m/n/12 2[]\OML/cmm/m/it/12 nd[]:tex \OT1/cmr/m/n/12 ========\OML/cmm/m/it/12 >>>>>>>> \OT1/cmr/m/n/12 000\OML/cmm/m/it/12 aa\OT1/cmr/m/n/12 61(\OML/cmm/m/it/12 chapter[]ounter\OT1/cmr/m/n/12 ) :
+ []
+
+[1
+
+]
+Chapter 3.
+./chapters/CCC_chapter2_and_3.tex:10: Missing $ inserted.
+<inserted text> 
+                $
+l.10 <<<<<<<< HEAD:chapters/CCC_
+                                chapter2_and_3.tex
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chapters/CCC_chapter2_and_3.tex:13: Missing $ inserted.
+<inserted text> 
+                $
+l.13 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (81.72754pt too wide) in paragraph at lines 10--13
+\TU/NimbusRomanNo9L(0)/m/n/12 «««« HEAD:chapters/CCC$[]\OML/cmm/m/it/12 hapter\OT1/cmr/m/n/12 2[]\OML/cmm/m/it/12 nd[]:tex \OT1/cmr/m/n/12 =======\OML/cmm/m/it/12 >>>>>>> ec\OT1/cmr/m/n/12 493\OML/cmm/m/it/12 a\OT1/cmr/m/n/12 2(\OML/cmm/m/it/12 UpdateonOverleaf:\OT1/cmr/m/n/12 ) :
+ []
+
+./chapters/CCC_chapter2_and_3.tex:16: Missing $ inserted.
+<inserted text> 
+                $
+l.16 <<<<<<< HEAD:chapters/CCC_
+                               chapter2_and_3.tex
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chapters/CCC_chapter2_and_3.tex:18: Missing $ inserted.
+<inserted text> 
+                $
+l.18 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chapters/CCC_chapter2_and_3.tex:21: Missing $ inserted.
+<inserted text> 
+                $
+l.21 >>>>>>>> 000aa61 (chapter_
+                               counter):chapters/chapter2_and_3.tex
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chapters/CCC_chapter2_and_3.tex:22: Missing $ inserted.
+<inserted text> 
+                $
+l.22 \subsection
+                {語音表徵的語音學分析}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[2
+
+] [3]
+Chapter 2.
+[4
+
+]
+Chapter 3.
+./chapters/CCC_chapter2_and_3.tex:37: Missing $ inserted.
+<inserted text> 
+                $
+l.37 <<<<<<< HEAD:chapters/CCC_
+                               chapter2_and_3.tex
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chapters/CCC_chapter2_and_3.tex:38: Missing $ inserted.
+<inserted text> 
+                $
+l.38 \section
+             {全部深層類神經網路（deep neural network）}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Citation `mcculloch1943logical' on page 5 undefined on input line 44.
+
+[5
+
+] [6])
+
+! LaTeX Error: File `chapters/chapter2.tex' not found.
 
 Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: tex)
 
 Enter file name: 
-/storage/LabJob/Projects/truth_report_research/thesis.tex:83: Emergency stop.
+./chapters/total.tex:13: Emergency stop.
 <read *> 
          
-l.83 \input{_scripts/utils/headerfooter}
-                                        ^^M
+l.13 \input{chapters/chapter2}
+                              ^^M
 *** (cannot \read from terminal in nonstop modes)
 
  
 Here is how much of TeX's memory you used:
- 34590 strings out of 476675
- 752919 string characters out of 5803799
- 1844296 words of memory out of 5000000
- 54348 multiletter control sequences out of 15000+600000
- 513309 words of font info for 48 fonts, out of 8000000 for 9000
+ 35345 strings out of 476675
+ 785362 string characters out of 5803799
+ 1861296 words of memory out of 5000000
+ 55021 multiletter control sequences out of 15000+600000
+ 521337 words of font info for 93 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 101i,0n,105p,498b,262s stack positions out of 10000i,1000n,20000p,200000b,200000s
-No pages of output.
+ 101i,11n,105p,498b,790s stack positions out of 10000i,1000n,20000p,200000b,200000s
+Output written on thesis.pdf (6 pages).
