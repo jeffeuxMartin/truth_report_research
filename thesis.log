@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.3)  15 MAY 2024 20:42
 =======
 This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.3)  15 MAY 2024 19:40
 >>>>>>> d6a3a07 (Restructure files)
+=======
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.3)  15 MAY 2024 20:29
+>>>>>>> 9be8e62 (Update on Overleaf.)
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -809,6 +813,88 @@ Package: zhnumber 2022/07/14 v3.0 Typesetting numbers with Chinese glyphs
 File: zhnumber-utf8.cfg 2022/07/14 v3.0 Chinese numerals with UTF8 encoding
 ))
 
+<<<<<<< HEAD
+=======
+./ntuthesis.sty:18: Package fontspec Error: The font "BiauKai" cannot be found.
+
+For immediate help type H <return>.
+ ...                                              
+                                                  
+l.18     BoldFont = Kaiti-Black, ]
+                                  
+
+A font might not be found for many reasons.
+ Check the spelling, where the font is installed etc. etc.
+
+ When in doubt, ask someone for help!
+
+
+
+Package fontspec Warning: Font "BiauKai" does not contain requested Script
+(fontspec)                "CJK".
+
+
+./ntuthesis.sty:18: Package fontspec Error: The font "BiauKai" cannot be found.
+
+For immediate help type H <return>.
+ ...                                              
+                                                  
+l.18     BoldFont = Kaiti-Black, ]
+                                  
+
+A font might not be found for many reasons.
+ Check the spelling, where the font is installed etc. etc.
+
+ When in doubt, ask someone for help!
+
+
+
+./ntuthesis.sty:18: Package fontspec Error: The font "BiauKai" cannot be found.
+
+For immediate help type H <return>.
+ ...                                              
+                                                  
+l.18     BoldFont = Kaiti-Black, ]
+                                  
+
+A font might not be found for many reasons.
+ Check the spelling, where the font is installed etc. etc.
+
+ When in doubt, ask someone for help!
+
+
+
+./ntuthesis.sty:18: Package fontspec Error: The font "Kaiti-Black" cannot be found.
+
+For immediate help type H <return>.
+ ...                                              
+                                                  
+l.18     BoldFont = Kaiti-Black, ]
+                                  
+
+A font might not be found for many reasons.
+ Check the spelling, where the font is installed etc. etc.
+
+ When in doubt, ask someone for help!
+
+
+
+./ntuthesis.sty:18: Package fontspec Error: The font "Kaiti-Black" cannot be found.
+
+For immediate help type H <return>.
+ ...                                              
+                                                  
+l.18     BoldFont = Kaiti-Black, ]
+                                  
+
+A font might not be found for many reasons.
+ Check the spelling, where the font is installed etc. etc.
+
+ When in doubt, ask someone for help!
+
+
+
+>>>>>>> 9be8e62 (Update on Overleaf.)
 Package fontspec Info: Font family 'BiauKai(0)' created for font 'BiauKai'
 (fontspec)             with options
 (fontspec)             [Script={CJK},Path={./_scripts/fonts/chinese/},Extension={.ttf},BoldFont={Kaiti-Black}].
@@ -817,11 +903,21 @@ Package fontspec Info: Font family 'BiauKai(0)' created for font 'BiauKai'
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
+<<<<<<< HEAD
 (fontspec)             <->"[./_scripts/fonts/chinese/BiauKai.ttf]/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
 (fontspec)             <->"[./_scripts/fonts/chinese/Kaiti-Black.ttf]/OT:script=hani;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+=======
+(fontspec)             <->"[./_scripts/fonts/chinese/BiauKai.ttf]/OT"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"[./_scripts/fonts/chinese/BiauKai.ttf]/OT"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[./_scripts/fonts/chinese/Kaiti-Black.ttf]/OT"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"[./_scripts/fonts/chinese/Kaiti-Black.ttf]/OT"
+>>>>>>> 9be8e62 (Update on Overleaf.)
 
 
 Package fontspec Info: Font family 'NimbusRomanNo9L(0)' created for font
@@ -843,7 +939,11 @@ Package fontspec Info: Font family 'NimbusRomanNo9L(0)' created for font
 (fontspec)             Roman No9 L/BI/OT:language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
+<<<<<<< HEAD
  (./cjkindent.sty
+=======
+(./cjkindent.sty
+>>>>>>> 9be8e62 (Update on Overleaf.)
 Package: cjkindent 
 \elegant@CJKChar@size@dimen=\dimen345
 )) (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
@@ -905,6 +1005,7 @@ Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 \f@nch@O@erf=\skip83
 \f@nch@O@olf=\skip84
 \f@nch@O@orf=\skip85
+<<<<<<< HEAD
 <<<<<<< HEAD
 ) (./_scripts/utils/headerfooter.tex) (./_scripts/utils/title_settings.tex) (./_scripts/utils/ntu_definitions.tex) (./_scripts/utils/ntu_chnum.tex)
 Package translations Info: No language package found. I am going to use `english' as default language. on input line 108.
@@ -998,11 +1099,17 @@ Package translations Info: loading dictionary `translations-basic-dictionary' fo
 
 ! LaTeX Error: File `_scripts/utils/headerfooter.tex' not found.
 >>>>>>> d6a3a07 (Restructure files)
+=======
+)
+
+! LaTeX Error: File `_scripts/utils/headerfooter.tex' not found.
+>>>>>>> 9be8e62 (Update on Overleaf.)
 
 Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: tex)
 
 Enter file name: 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ./chapters/total.tex:3: Emergency stop.
 <read *> 
@@ -1010,16 +1117,22 @@ Enter file name:
 l.3 ...ut{_scripts/materials/helpers/tedious_cmds}
                                                   ^^M
 =======
+=======
+>>>>>>> 9be8e62 (Update on Overleaf.)
 /storage/LabJob/Projects/truth_report_research/thesis.tex:83: Emergency stop.
 <read *> 
          
 l.83 \input{_scripts/utils/headerfooter}
                                         ^^M
+<<<<<<< HEAD
 >>>>>>> d6a3a07 (Restructure files)
+=======
+>>>>>>> 9be8e62 (Update on Overleaf.)
 *** (cannot \read from terminal in nonstop modes)
 
  
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
 <<<<<<< HEAD
  35009 strings out of 476675
  769414 string characters out of 5803799
@@ -1037,4 +1150,13 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  101i,0n,105p,498b,262s stack positions out of 10000i,1000n,20000p,200000b,200000s
 >>>>>>> d6a3a07 (Restructure files)
+=======
+ 34590 strings out of 476675
+ 752919 string characters out of 5803799
+ 1844296 words of memory out of 5000000
+ 54348 multiletter control sequences out of 15000+600000
+ 513309 words of font info for 48 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 101i,0n,105p,498b,262s stack positions out of 10000i,1000n,20000p,200000b,200000s
+>>>>>>> 9be8e62 (Update on Overleaf.)
 No pages of output.
