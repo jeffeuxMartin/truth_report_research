@@ -1,0 +1,111 @@
+% this file is encoded in utf-8
+% v3.0 (Jun. 11, 2019)
+
+\documentclass[12pt, a4paper]{ntuthesis}
+
+% 除非校方修改了論文格式 (margins, header, footer, 浮水印, 中文數字之章別)
+% 或者需要增加所用的 LaTeX 套件，
+% 或者要改預設中文字型、編碼
+% 否則毋須修改本檔內容
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{mathtools} % 各式 AMS 數學功能
+\usepackage{amssymb} % 各式 AMS 數學符號
+\usepackage{mathrsfs} %草寫體數學符號，在數學模式裡用 \mathscr{E} 得草寫 E
+\usepackage{bm}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabularx}
+\usepackage{url}
+\usepackage[usenames,dvipsnames]{color}
+%\usepackage[square, comma, numbers, sort&compress]{natbib}
+\usepackage[colorlinks, linkcolor=black, citecolor=black, urlcolor=black, unicode]{hyperref}
+
+\usepackage{siunitx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,chains,scopes}
+\usetikzlibrary{shapes.geometric,angles}
+\usetikzlibrary{backgrounds,fit}
+
+\usepackage{multirow,multicol,rotating}
+% 插圖套件 graphicx
+\usepackage{graphicx}
+% font, margin, linestretch 是設在 ntuthesis.sty 裡
+\usepackage{ntuthesis}
+
+
+%%%%%%%%% listings / algorithm %%%%%%%%%%
+\usepackage{listings} % 程式列表套件
+% hyperref跟algorithm衝突，hyperref必須放在algorithm前面
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+%
+% listing setting
+\lstset{breaklines=true,% 過長的程式行可斷行
+extendedchars=false,% 中文處理不需要 extendedchars
+texcl=true,% 中文註解需要有 TeX 處理過的 comment line, 所以設成 true
+comment=[l]\%\%,% 以雙「百分號」做為程式中文註解的起頭標記，配合 MATLAB
+basicstyle=\small,% 小號字體, 約 10 pt 大小
+commentstyle=\upshape,% 預設是斜體字，會影響註解裏的英文，改用正體
+%language=Octave % 會將一些 octave 指令以粗體顯示
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%% fancyhdr %%%%%%%%%%
+% 增強功能型頁楣 / 頁腳套件
+\usepackage{fancyhdr}  % 借用此套件來擺放浮水印 
+% (佔用了 central header)
+% 不需要浮水印的使用者仍可利用此套件，產生所需的 header, footer
+%
+% 啟動 fancy header/footer 套件
+\pagestyle{fancy}
+\fancyhead{}  % reset left, central, right header to empty
+\fancyfoot[C]{\thepage} %中間 footer 擺放頁碼
+\renewcommand{\headrulewidth}{0pt} % header 的直線; 0pt 則無線
+
+% 如果不需要任何浮水印，則請把下列介於 >>> 與 <<< 之間
+% 的文字行關掉 (行首加上百分號)
+%% 浮水印 >>> 
+% 請用 Adobe Acrobat 加入
+% 也會需要加入 doi 的浮水印
+%\input{_scripts/utils/watermark}
+%% <<< 浮水印
+
+% 如需額外的頁楣 (header) 或 footer，請在 headerfooter.tex 裡依例修改
+% 它的預設內容是都關掉，可依需要打開
+\input{_scripts/utils/headerfooter}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 常見的 notation 指令
+% 請修改 notations.tex 加入自己需要的 notations
+\input{_scripts/utils/notations}
+
+% Title Page
+% 請修改 title_settings.tex 設定論文題目/指導教授等變數
+\input{_scripts/utils/title_settings}
+
+% 載入中文名詞的定義：例如，Figure -->「圖」, Chapter -->「第 x 章」
+\input{_scripts/utils/ntu_definitions}
+
+% 如果不需要以中文數字一、二、三呈現章別，例如「第一章」
+% 則請把下列介於 >>> 與 <<< 之間
+% 的文字行關掉 (行首加上百分號), 會以「第 1 章」呈現
+%% 中文數字章別 >>>
+\input{_scripts/utils/ntu_chnum}
+%% <<< 中文數字章別
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  end of preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\begin{document}
+\CJKindent  %%% ZZZ %%%  段首內縮兩格
+
+%%% 以下載入前頁、本文、後頁
+
+\input{_scripts/utils/thesis_frontpages}
+\input{chapters/all}
+\input{_scripts/utils/thesis_backpages}
+
+\end{document}
