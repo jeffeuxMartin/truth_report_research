@@ -28,6 +28,6 @@
     "editor.wordBasedSuggestions": "off",
     "editor.fontWeight": 550,
     // "editor.fontFamily": "'Iosevka Jeff', 'Courier New', monospace",
-    "editor.fontFamily": "'Calibri', 標楷體, Consolas, 'Courier New', monospace",
+    "0editor.fontFamily": "'Calibri', 標楷體, Consolas, 'Courier New', monospace",
     "latex-workshop.latex.autoClean.run": "onSucceeded",
 }
