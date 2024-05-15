@@ -1205,15 +1205,9 @@ Package translations Info: loading dictionary `translations-basic-dictionary' fo
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count391
-(./chapters/total.tex (./_scripts/materials/helpers/tedious_cmds.tex) (./chapters/CCC_chapter2_and_3.tex
-./chapters/CCC_chapter2_and_3.tex:2: Missing $ inserted.
-<inserted text> 
-                $
-l.2 <<<<<<<< HEAD:chapters/CCC_
-                               chapter2_and_3.tex
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+(./chapters/total.tex
 
+<<<<<<< HEAD
 LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1334,11 +1328,15 @@ LaTeX Warning: Citation `mcculloch1943logical' on page 5 undefined on input line
 
 ! LaTeX Error: File `chapters/chapter2.tex' not found.
 >>>>>>> edf9c87 (Update on Overleaf.)
+=======
+! LaTeX Error: File `_scripts/materials/helpers/tedious_cmds.tex' not found.
+>>>>>>> 2c80670 (_scripts renamed)
 
 Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: tex)
 
 Enter file name: 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1366,6 +1364,13 @@ l.83 \input{_scripts/utils/headerfooter}
 l.13 \input{chapters/chapter2}
                               ^^M
 >>>>>>> edf9c87 (Update on Overleaf.)
+=======
+./chapters/total.tex:3: Emergency stop.
+<read *> 
+         
+l.3 ...ut{_scripts/materials/helpers/tedious_cmds}
+                                                  ^^M
+>>>>>>> 2c80670 (_scripts renamed)
 *** (cannot \read from terminal in nonstop modes)
 
  
@@ -1373,11 +1378,15 @@ Here is how much of TeX's memory you used:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2c80670 (_scripts renamed)
  35009 strings out of 476675
  769414 string characters out of 5803799
  1844296 words of memory out of 5000000
  54737 multiletter control sequences out of 15000+600000
  513341 words of font info for 52 fonts, out of 8000000 for 9000
+<<<<<<< HEAD
  1348 hyphenation exceptions out of 8191
  101i,1n,105p,498b,399s stack positions out of 10000i,1000n,20000p,200000b,200000s
 =======
@@ -1409,3 +1418,8 @@ No pages of output.
  101i,11n,105p,498b,790s stack positions out of 10000i,1000n,20000p,200000b,200000s
 Output written on thesis.pdf (6 pages).
 >>>>>>> edf9c87 (Update on Overleaf.)
+=======
+ 1348 hyphenation exceptions out of 8191
+ 101i,1n,105p,498b,399s stack positions out of 10000i,1000n,20000p,200000b,200000s
+No pages of output.
+>>>>>>> 2c80670 (_scripts renamed)
