@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.3)  15 MAY 2024 20:42
+=======
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.3)  15 MAY 2024 19:40
+>>>>>>> d6a3a07 (Restructure files)
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -901,6 +905,7 @@ Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 \f@nch@O@erf=\skip83
 \f@nch@O@olf=\skip84
 \f@nch@O@orf=\skip85
+<<<<<<< HEAD
 ) (./_scripts/utils/headerfooter.tex) (./_scripts/utils/title_settings.tex) (./_scripts/utils/ntu_definitions.tex) (./_scripts/utils/ntu_chnum.tex)
 Package translations Info: No language package found. I am going to use `english' as default language. on input line 108.
 
@@ -988,20 +993,34 @@ Package translations Info: loading dictionary `translations-basic-dictionary' fo
 (./chapters/total.tex
 
 ! LaTeX Error: File `_scripts/materials/helpers/tedious_cmds.tex' not found.
+=======
+)
+
+! LaTeX Error: File `_scripts/utils/headerfooter.tex' not found.
+>>>>>>> d6a3a07 (Restructure files)
 
 Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: tex)
 
 Enter file name: 
+<<<<<<< HEAD
 ./chapters/total.tex:3: Emergency stop.
 <read *> 
          
 l.3 ...ut{_scripts/materials/helpers/tedious_cmds}
                                                   ^^M
+=======
+/storage/LabJob/Projects/truth_report_research/thesis.tex:83: Emergency stop.
+<read *> 
+         
+l.83 \input{_scripts/utils/headerfooter}
+                                        ^^M
+>>>>>>> d6a3a07 (Restructure files)
 *** (cannot \read from terminal in nonstop modes)
 
  
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  35009 strings out of 476675
  769414 string characters out of 5803799
  1844296 words of memory out of 5000000
@@ -1009,4 +1028,13 @@ Here is how much of TeX's memory you used:
  513341 words of font info for 52 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  101i,1n,105p,498b,399s stack positions out of 10000i,1000n,20000p,200000b,200000s
+=======
+ 34591 strings out of 476675
+ 753156 string characters out of 5803799
+ 1844296 words of memory out of 5000000
+ 54344 multiletter control sequences out of 15000+600000
+ 513341 words of font info for 52 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 101i,0n,105p,498b,262s stack positions out of 10000i,1000n,20000p,200000b,200000s
+>>>>>>> d6a3a07 (Restructure files)
 No pages of output.
