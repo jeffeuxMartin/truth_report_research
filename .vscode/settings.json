@@ -1,5 +1,5 @@
 {
-    "files.exclude": {
+    "0files.exclude": {
         "thesis.bbl": true,
         "thesis.synctex.gz": true,
         "utils": true,
