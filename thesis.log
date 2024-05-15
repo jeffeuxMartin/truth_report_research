@@ -985,153 +985,28 @@ Package translations Info: loading dictionary `translations-basic-dictionary' fo
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count391
-(./chapters/total.tex (./_scripts/materials/helpers/tedious_cmds.tex) (./chapters/CCC_chapter2_and_3.tex
-./chapters/CCC_chapter2_and_3.tex:2: Missing $ inserted.
-<inserted text> 
-                $
-l.2 <<<<<<<< HEAD:chapters/CCC_
-                               chapter2_and_3.tex
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+(./chapters/total.tex
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
-(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-./chapters/CCC_chapter2_and_3.tex:6: Missing $ inserted.
-<inserted text> 
-                $
-l.6 \mychcnt{3}\chapter
-                       {
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (5.39719pt too wide) in paragraph at lines 7--6
-[]\TU/NimbusRomanNo9L(0)/m/n/12 «««< HEAD «««< HEAD «««« HEAD:chapters/CCC$[]\OML/cmm/m/it/12 hapter\OT1/cmr/m/n/12 2[]\OML/cmm/m/it/12 nd[]:tex <<<<<<<
- []
-
-
-Overfull \hbox (74.39668pt too wide) in paragraph at lines 7--6
-\OML/cmm/m/it/12 HEAD \OT1/cmr/m/n/12 : \OML/cmm/m/it/12 chapters=CCC[]hapter\OT1/cmr/m/n/12 2[]\OML/cmm/m/it/12 nd[]:tex \OT1/cmr/m/n/12 ========\OML/cmm/m/it/12 >>>>>>>> \OT1/cmr/m/n/12 000\OML/cmm/m/it/12 aa\OT1/cmr/m/n/12 61(\OML/cmm/m/it/12 chapter[]ounter\OT1/cmr/m/n/12 ) :
- []
-
-[1
-
-]
-Chapter 3.
-./chapters/CCC_chapter2_and_3.tex:10: Missing $ inserted.
-<inserted text> 
-                $
-l.10 <<<<<<<< HEAD:chapters/CCC_
-                                chapter2_and_3.tex
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./chapters/CCC_chapter2_and_3.tex:13: Missing $ inserted.
-<inserted text> 
-                $
-l.13 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (81.72754pt too wide) in paragraph at lines 10--13
-\TU/NimbusRomanNo9L(0)/m/n/12 «««« HEAD:chapters/CCC$[]\OML/cmm/m/it/12 hapter\OT1/cmr/m/n/12 2[]\OML/cmm/m/it/12 nd[]:tex \OT1/cmr/m/n/12 =======\OML/cmm/m/it/12 >>>>>>> ec\OT1/cmr/m/n/12 493\OML/cmm/m/it/12 a\OT1/cmr/m/n/12 2(\OML/cmm/m/it/12 UpdateonOverleaf:\OT1/cmr/m/n/12 ) :
- []
-
-./chapters/CCC_chapter2_and_3.tex:16: Missing $ inserted.
-<inserted text> 
-                $
-l.16 <<<<<<< HEAD:chapters/CCC_
-                               chapter2_and_3.tex
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./chapters/CCC_chapter2_and_3.tex:18: Missing $ inserted.
-<inserted text> 
-                $
-l.18 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./chapters/CCC_chapter2_and_3.tex:21: Missing $ inserted.
-<inserted text> 
-                $
-l.21 >>>>>>>> 000aa61 (chapter_
-                               counter):chapters/chapter2_and_3.tex
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./chapters/CCC_chapter2_and_3.tex:22: Missing $ inserted.
-<inserted text> 
-                $
-l.22 \subsection
-                {語音表徵的語音學分析}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-[2
-
-] [3]
-Chapter 2.
-[4
-
-]
-Chapter 3.
-./chapters/CCC_chapter2_and_3.tex:37: Missing $ inserted.
-<inserted text> 
-                $
-l.37 <<<<<<< HEAD:chapters/CCC_
-                               chapter2_and_3.tex
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./chapters/CCC_chapter2_and_3.tex:38: Missing $ inserted.
-<inserted text> 
-                $
-l.38 \section
-             {全部深層類神經網路（deep neural network）}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-LaTeX Warning: Citation `mcculloch1943logical' on page 5 undefined on input line 44.
-
-[5
-
-] [6])
-
-! LaTeX Error: File `chapters/chapter2.tex' not found.
+! LaTeX Error: File `_scripts/materials/helpers/tedious_cmds.tex' not found.
 
 Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: tex)
 
 Enter file name: 
-./chapters/total.tex:13: Emergency stop.
+./chapters/total.tex:3: Emergency stop.
 <read *> 
          
-l.13 \input{chapters/chapter2}
-                              ^^M
+l.3 ...ut{_scripts/materials/helpers/tedious_cmds}
+                                                  ^^M
 *** (cannot \read from terminal in nonstop modes)
 
  
 Here is how much of TeX's memory you used:
- 35345 strings out of 476675
- 785362 string characters out of 5803799
- 1861296 words of memory out of 5000000
- 55021 multiletter control sequences out of 15000+600000
- 521337 words of font info for 93 fonts, out of 8000000 for 9000
+ 35009 strings out of 476675
+ 769414 string characters out of 5803799
+ 1844296 words of memory out of 5000000
+ 54737 multiletter control sequences out of 15000+600000
+ 513341 words of font info for 52 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 101i,11n,105p,498b,790s stack positions out of 10000i,1000n,20000p,200000b,200000s
-Output written on thesis.pdf (6 pages).
+ 101i,1n,105p,498b,399s stack positions out of 10000i,1000n,20000p,200000b,200000s
+No pages of output.
