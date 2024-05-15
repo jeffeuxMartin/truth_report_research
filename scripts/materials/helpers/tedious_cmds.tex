@@ -15,3 +15,6 @@
     \colorbox{pink}{\textcolor{green}{
         \lbrack\lbrack\lbrack}\textcolor{
             blue}{#1}\textcolor{green}{\rbrack\rbrack\rbrack}}}}
+
+\newcommand{\mysetcounter}[2]{\setcounter{#1}{\the\numexpr#2 - 1\relax}}
+\newcommand{\mychcnt}[1]{\mysetcounter{chapter}{#1}}
