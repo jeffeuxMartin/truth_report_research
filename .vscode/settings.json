@@ -4,7 +4,7 @@
         "thesis.synctex.gz": true,
         "utils": true,
         "fonts": true,
-        "_scripts": true,
+        "scripts": true,
         "*.sty": true,
         "*.cls": true,
         ".gitignore": true,
