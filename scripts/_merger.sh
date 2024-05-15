@@ -1,3 +1,4 @@
+cd /storage/LabJob/Projects/truth_report_research
 git fetch origin
 git fetch overleaf
 git merge overleaf/master
