@@ -1,34 +1,22 @@
-% !TeX root = ./thesis.tex
-
-\mychcnt{3}\chapter{
-單一語音離散表徵與語音標記的對應模式}
-\section{動機}  % \section{簡介}
-\section{相關研究}
-
-在 HuBERT 出來之後，
-
-\subsection{語音表徵的語音學分析}
-\section{衡量方式}
-\subsection{音位（phoneme）長條圖（bar chart）}
-\subsection{純度（purity）、熵（entropy）}
-\subsection{對齊（alignment）}
-\section{語音學分類}
-\section{分析結果}
-\subsection{基於各自音位的分析}
-\subsection{基於語音學分類的分析}
-\section{本章總結}
+% !TeX root = ../thesis.tex
 
 % ============================================================ %
 % ============================================================ %
 
-\mychcnt{2}\chapter{
+\chapter{
 背景知識}
+由於本論文用到的 units 來自自監督學習的語音表徵，因此在介紹主要研究內容之前，我們會先介紹自監督學習 
 \section{深層類神經網路（deep neural network）}
 
 　　深層類神經網路（Deep neural network） 是麥氏（McCulloch）在 1943 年提出 \cite{mcculloch1943logical}，取法自生物神經連結的計算模型，旨在模擬生物神經系統的連結，以模仿生物的各項功能，進而透過機器學習的最佳化演算法，使得整個模型能夠藉由資料去貼合理想的函數，以達成應用或工程上所需要的各種任務。 。
 
     以發展此模型為主軸的心理學流派，在計算認知神經科學中被稱為「連結派（connectionism）」，其後因為該網路的彈性與平行化的能力，和諸如圖形處理器（graph processing unit，GPU）等硬體裝置能夠 最好的利用。 
     并能夠更 好的描述資料分佈、達到前所未有的效能 ，因此近年在電腦科學的機器學習領域中獲得重大進展，並因此現已成為人工智慧發展的主流。
+
+\subsection{簡介}
+\subsection{訓練方式}
+
+\subsection{FFN}
 
     基於深層類神經網路的神經架構有 CNN、RNN、Transformer 等等，由於這些架構在語音與文字處理上都已經被廣泛使用，因此在下面分別介紹：
 
@@ -57,13 +45,42 @@
 由於其能夠高度平行化的特性， 日後在 自然源處理和語音處理，甚至到電腦視覺領域等近乎整個深層學習的領域都被廣泛的應用。  
 
 
-\section{表徵（representation）學習}
+\section{表徵（representation）學習與自監督式學習（SSL）}
 
-\subsection{文字的語意表徵}
 
+\subsection{特徵}
+
+原本在文字和語音。文字會用 TF-IDF 等等，語音則會用 mel 和 MFCC
+
+\subsection{表徵學習}
+
+後來基於 Mikolov 的 Word2Vec
 word2vec 是 mikolov \CITEME 最早提出跟對於文字進行語義表徵的 work。在其後
+開始嘗試從大量資料去學習出表徵
 
-\subsection{語音特徵與表徵}
+結合 contextulaized embedding 有了 ELMo
+
+\subsection{SSL (這邊接下來直接看以前碩論怎麼分。宏毅的再說）}
+
+從 contextulaized 的精神，結合 SAttn，BERT 被提出來，並有了 SSL 的概念
+
+SSL 的好處是可以更好的利用 NN 的學習與泛化（generalization）能力，從大量的未標註資料中，就由 pretext tasks 的引導，在 unsupervised 的情形下利用資料本身結構進行學習。
+
+\subsubsection{MLM/recon}
+
+BERT
+
+\subsubsection{CLM/predictive}
+
+GPT, APC
+
+\subsubsection{contrastive}
+
+CPC // 所以這個在後面會不會出事？
+
+ 
+
+
 
 
 \section{語音基石模型與自監督式學習}
