@@ -52,13 +52,16 @@ P.-J. Chen, K.~Tran, Y.~Yang, J.~Du, J.~Kao, Y.-A. Chung, P.~Tomasello, P.-A. Du
 \bibitem{wu2023wav2seq}
 F.~Wu, K.~Kim, S.~Watanabe, K.~J. Han, R.~McDonald, K.~Q. Weinberger, and Y.~Artzi, ``Wav2seq: Pre-training speech-to-text encoder-decoder models using pseudo languages,'' in \emph{ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2023, pp. 1--5.
 
-\bibitem{ren2022speech}
-S.~Ren, S.~Liu, Y.~Wu, L.~Zhou, and F.~Wei, ``Speech pre-training with acoustic piece,'' 2022.
-
 \bibitem{chang2024exploring}
 X.~Chang, B.~Yan, K.~Choi, J.-W. Jung, Y.~Lu, S.~Maiti, R.~Sharma, J.~Shi, J.~Tian, S.~Watanabe \emph{et~al.}, ``Exploring speech recognition, translation, and understanding with discrete speech units: A comparative study,'' in \emph{ICASSP 2024-2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2024, pp. 11\,481--11\,485.
 
 \bibitem{mcculloch1943logical}
 W.~S. McCulloch and W.~Pitts, ``A logical calculus of the ideas immanent in nervous activity,'' \emph{The bulletin of mathematical biophysics}, vol.~5, pp. 115--133, 1943.
+
+\bibitem{726791}
+Y.~Lecun, L.~Bottou, Y.~Bengio, and P.~Haffner, ``Gradient-based learning applied to document recognition,'' \emph{Proceedings of the IEEE}, vol.~86, no.~11, pp. 2278--2324, 1998.
+
+\bibitem{hubel1959receptive}
+``Receptive fields of single neurones in the cat's striate cortex,'' \emph{The Journal of physiology}, vol. 148, no.~3, p. 574, 1959.
 
 \end{thebibliography}
