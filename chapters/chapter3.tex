@@ -1,7 +1,6 @@
 % !TeX root = ../thesis.tex
 
-\chapter{
-單一語音離散表徵與語音標記的對應模式}
+\chapter{單一語音離散表徵與語音標記的對應模式}  %
 
 \section{動機簡介}  % \section{簡介}
 
@@ -59,7 +58,7 @@ $$\frac{I(y;z)}{H(y)}=\cfrac{\sum_i \sum_j p_{yz}(i, j) \log \cfrac{p_{yz}(i, j)
 
 \subsection{對齊（alignment）}
 cluster是否保留segment資訊，不將不同phoneme合併
-segmentation → 
+segmentation $\rightarrow$
 怕說只是每個 frame 本身 unit 或 piece 可以跟 phoeneme 特徵相關，但放在連續的語音中被切得很碎/前後文相關的東西不知道有沒有抓到
 
 要計算 phoneme alignment ，我們參考 CITMEALIGNM 本身需要考慮 P 值、R 值 等，以下說明如下：
