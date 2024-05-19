@@ -18,9 +18,9 @@
     
 \section{研究方向}
 　　
-本研究論文為了探究離散單元本身是否具有潛力可以單純透過大量語音資料的自監督學習與統計過程，從文本中找尋出語音中更精細的結構，乃至於類似文字或是從語言學（linguistics）等人類知識領域定義出的「離散單位」──如音素（phone）、音位（phoneme）、字符（character）、「詞綴與字根」（即「詞素（morpheme）」）或單字（word）等等。因此，本研究取法自 HuBERT 本身為了證明其離散單元具有一定的「聲學單元（acoustic unit）」特性的「純度（purity）」和「相互資訊（mutual information，MI）」的分析數據作為分析離散語音表徵和「音位」－－作為人類知識理解語音中最基礎的單位－－之間相關性（correlation）的參考。
+本研究論文為了探究離散單元本身是否具有潛力可以單純透過大量語音資料的自監督學習與統計過程，從文本中找尋出語音中更精細的結構，乃至於類似文字或是從語言學（linguistics）等人類知識領域定義出的「離散單位」－－如音素（phone）、音位（phoneme）、字符（character）、「詞綴與字根」（即「詞素（morpheme）」）或單字（word）等等。因此，本研究取法自 HuBERT 本身為了證明其離散單元具有一定的「聲學單元（acoustic unit）」特性的「純度（purity）」和「相互資訊（mutual information，MI）」的分析數據作為分析離散語音表徵和「音位」－－作為人類知識理解語音中最基礎的單位－－之間相關性（correlation）的參考。
 
-此外，基於訊號速率（如序列的長度）的考量，結合在文字處理中如 BPE 等等常見的次詞單位（subword）分詞（tokenization）演算法，基於形式上的相似性，因而也可以套用在像是 HuBERT離散單元這種離散的符號上，將離散單元序列中相似的規律（pattern）發掘出來。近期如 Wav2Seq \cite{wu2023wav2seq}、\cite{ren2022speech}、\cite{chang2024exploring} 等作品也先進行了類似的嘗試。本論文則是在除了經驗上（empirically）將其用於大量資料訓練的視角以外，從「將其視為另一種離散單位」的觀點進行統計數據的量化分析（quantitative analysis），作為在計算資源有限的前提下決策數據編碼的一個判斷標準。
+此外，基於訊號速率（如序列的長度）的考量，結合在文字處理中如 BPE 等等常見的次詞單位（subword）分詞（tokenization）演算法，基於形式上的相似性，因而也可以套用在像是 HuBERT離散單元這種離散的符號上，將離散單元序列中相似的規律（pattern）發掘出來。近期如 Wav2Seq \cite{wu2023wav2seq}、\cite{DBLP:conf/interspeech/Ren00ZW22}、\cite{chang2024exploring} 等作品也先進行了類似的嘗試。本論文則是在除了經驗上（empirically）將其用於大量資料訓練的視角以外，從「將其視為另一種離散單位」的觀點進行統計數據的量化分析（quantitative analysis），作為在計算資源有限的前提下決策數據編碼的一個判斷標準。
 
 \section{主要貢獻}
 　　
