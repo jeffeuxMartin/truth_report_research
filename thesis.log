@@ -995,4 +995,34 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 43.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on in
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 43.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+) [3]) (./chapters/chapter3.tex [4] [5]
+Chapter 3.
+File: figures/3ac2dbd72f1431bb1ffde8fc28724640.webp Graphic file (type eps)
+<figures/3ac2dbd72f1431bb1ffde8fc28724640.webp>
+File: figures/3ac2dbd72f1431bb1ffde8fc28724640.png Graphic file (type bmp)
+<figures/3ac2dbd72f1431bb1ffde8fc28724640.png>
+File: figures/20240511141026-0fed3f0a.jpg Graphic file (type bmp)
+<figures/20240511141026-0fed3f0a.jpg>
+[6
+
+] [7] [8]
+Missing character: There is no → (U+2192) in font Nimbus Roman No9 L Regular/OT:language=dflt;mapping=tex-text;!
+[9]) [10]) (./thesis.bbl) [11
+
+] (./thesis.aux)
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: CC46067BA98052624C9E2C145110BEDD;5260.
+ ) 
+Here is how much of TeX's memory you used:
+ 35525 strings out of 476675
+ 792173 string characters out of 5803799
+ 1866296 words of memory out of 5000000
+ 55159 multiletter control sequences out of 15000+600000
+ 521353 words of font info for 95 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 101i,12n,105p,561b,796s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on thesis.pdf (11 pages).
