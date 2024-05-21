@@ -14,6 +14,15 @@ thesis.tex
 
 ================
 
+chapters
+chapters_ref
+figures
+scripts
+thesis.bib
+thesis.pdf
+
+================
+
 .
 ├── chapters
 │   ├── ch2.tex
