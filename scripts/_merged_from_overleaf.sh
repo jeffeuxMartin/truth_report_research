@@ -14,7 +14,7 @@ else
     echo "failed to fetch overleaf"
     exit 97
 fi
-git pull overleaf --rebase
+git pull overleaf master --rebase
 git merge overleaf/master
 # git merge origin/master
 git add -A
