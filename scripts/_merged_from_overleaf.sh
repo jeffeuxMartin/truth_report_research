@@ -1,6 +1,13 @@
 cd /storage/LabJob/Projects/truth_report_research
 # git fetch origin
-git fetch overleaf
+# git fetch overleaf
+if ( timeout 10 git fetch origin ) ; then
+    # echo "fetched origin"
+    :
+else
+    echo "failed to fetch origin"
+    exit 97
+fi
 git merge overleaf/master
 # git merge origin/master
 git add -A
