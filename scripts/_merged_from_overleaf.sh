@@ -8,6 +8,7 @@ else
     echo "failed to fetch origin"
     exit 97
 fi
+git pull origin --rebase
 git merge overleaf/master
 # git merge origin/master
 git add -A
