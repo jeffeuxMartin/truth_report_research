@@ -5,21 +5,12 @@ git commit -m ('add local modification at ' + (Get-Date).ToString())
 git push
 
 git fetch origin
-# git fetch overleaf
-try {
-    Start-Process -FilePath "git" -ArgumentList "fetch overleaf" -Wait -Timeout 3000
-    # Write-Output "fetched origin"
-}
-catch {
-    Write-Output "failed to fetch overleaf"
-    exit 97
-}
+git fetch overleaf
 git pull overleaf --rebase
 git merge overleaf/master
 # git merge origin/master
 git add -A
-git commit -m `
-'merged from Overleaf at '"$(Get-Date)"
+git commit -m ('merged from Overleaf at ' + (Get-Date).ToString())
 git push
 
 # git fetch overleaf
