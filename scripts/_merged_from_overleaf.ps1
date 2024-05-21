@@ -6,7 +6,7 @@ git push
 
 git fetch origin
 git fetch overleaf
-git pull overleaf --rebase
+git pull overleaf master --rebase
 git merge overleaf/master
 # git merge origin/master
 git add -A
