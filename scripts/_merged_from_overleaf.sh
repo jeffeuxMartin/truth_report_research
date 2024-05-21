@@ -1,7 +1,7 @@
 cd /storage/LabJob/Projects/truth_report_research
 # git fetch origin
 # git fetch overleaf
-if ( timeout 10 git fetch origin ) ; then
+if ( timeout 3 git fetch origin ) ; then
     # echo "fetched origin"
     :
 else
