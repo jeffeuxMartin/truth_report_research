@@ -24,3 +24,7 @@ git push
 # git commit -m \
 # 'merged at '"$(date)"
 # git push
+
+git fetch overleaf
+git fetch github
+git fetch origin
