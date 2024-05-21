@@ -1,4 +1,10 @@
 cd /storage/LabJob/Projects/truth_report_research
+
+git add -A
+git commit -m \
+'add local modification at '"$(date)"
+git push
+
 git fetch origin
 # git fetch overleaf
 if ( timeout 3 git fetch overleaf ) ; then
