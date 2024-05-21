@@ -1,0 +1,81 @@
+chapters
+chapters_ref
+cjkindent.sty
+figures
+ntuthesis.cls
+ntuthesis.sty
+scripts
+thesis.bib
+thesis.pdf
+thesis.synctex.gz
+thesis.tex
+
+================
+
+.
+├── chapters
+│   ├── ch2.tex
+│   └── ch3.tex
+├── chapters_ref
+│   ├── comparison
+│   │   ├── or2.tex
+│   │   └── or3.tex
+│   ├── prepared
+│   │   ├── chapter4.tex
+│   │   └── chapter5.tex
+│   └── stable
+│       ├── chapter1.tex
+│       └── total.tex
+├── cjkindent.sty
+├── figures
+│   ├── 20240511141026-0fed3f0a.jpg
+│   ├── 3ac2dbd72f1431bb1ffde8fc28724640.png
+│   ├── 3ac2dbd72f1431bb1ffde8fc28724640.webp
+│   ├── figfake1.png
+│   ├── image.png
+│   └── neuron.drawio.png
+├── ntuthesis.cls
+├── ntuthesis.sty
+├── scripts
+│   ├── fonts
+│   │   ├── chinese
+│   │   └── english
+│   ├── materials
+│   │   ├── helpers
+│   │   ├── how-to-write-notes.tex
+│   │   └── _running.log
+│   ├── _merged_from_overleaf.sh
+│   ├── _merger.sh
+│   ├── myconfig.txt
+│   ├── old_materials
+│   │   ├── old_thesis.bib.txt
+│   │   └── REALthesis.tex.txt
+│   ├── outfile
+│   │   └── 乖乖寫的研究成果 _Real Ch1_ver1.pdf
+│   ├── running_latex.py
+│   ├── runn_latex.sh
+│   ├── runnn_py_latex.py
+│   ├── __structure.txt
+│   └── utils
+│       ├── AUTHOR
+│       ├── COPYING
+│       ├── headerfooter.tex
+│       ├── latexmkrc
+│       ├── Makefile
+│       ├── notations.tex
+│       ├── ntu_backpages.tex
+│       ├── ntu_chnum.tex
+│       ├── ntu_definitions.tex
+│       ├── ntu_frontpages.tex
+│       ├── README.md
+│       ├── thesis_backpages.tex
+│       ├── thesis_frontpages.tex
+│       ├── title_settings.tex
+│       ├── watermark.pdf
+│       └── watermark.tex
+├── thesis.bib
+├── thesis.pdf
+├── thesis.synctex.gz
+└── thesis.tex
+
+15 directories, 49 files
