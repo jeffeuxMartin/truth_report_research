@@ -1,10 +1,12 @@
+.vscode
 chapters
 chapters_ref
-cjkindent.sty
 figures
+scripts
+.gitignore
+cjkindent.sty
 ntuthesis.cls
 ntuthesis.sty
-scripts
 thesis.bib
 thesis.pdf
 thesis.synctex.gz
@@ -79,3 +81,64 @@ thesis.tex
 └── thesis.tex
 
 15 directories, 49 files
+
+====================
+
+.
+├── chapters
+│   ├── ch2.tex
+│   └── ch3.tex
+├── chapters_ref
+│   ├── comparison
+│   ├── prepared
+│   └── stable
+├── cjkindent.sty
+├── figures
+│   ├── 20240511141026-0fed3f0a.jpg
+│   ├── 3ac2dbd72f1431bb1ffde8fc28724640.png
+│   ├── 3ac2dbd72f1431bb1ffde8fc28724640.webp
+│   ├── figfake1.png
+│   ├── image.png
+│   └── neuron.drawio.png
+├── .git
+│   ├── branches
+│   ├── COMMIT_EDITMSG
+│   ├── config
+│   ├── description
+│   ├── FETCH_HEAD
+│   ├── HEAD
+│   ├── hooks
+│   ├── index
+│   ├── info
+│   ├── logs
+│   ├── objects
+│   ├── ORIG_HEAD
+│   ├── packed-refs
+│   └── refs
+├── .gitignore
+├── ntuthesis.cls
+├── ntuthesis.sty
+├── scripts
+│   ├── fonts
+│   ├── materials
+│   ├── _merged_from_overleaf.sh
+│   ├── _merger.sh
+│   ├── myconfig.txt
+│   ├── old_materials
+│   ├── outfile
+│   ├── running_latex.py
+│   ├── runn_latex.sh
+│   ├── runnn_py_latex.py
+│   ├── __structure.txt
+│   └── utils
+├── thesis.bib
+├── thesis.pdf
+├── thesis.synctex.gz
+├── thesis.tex
+└── .vscode
+    ├── keybindings.json
+    ├── launch.json
+    ├── settings.json
+    └── tasks.json
+
+20 directories, 35 files
