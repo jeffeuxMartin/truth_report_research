@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ -d /storage/LabJob/Projects/truth_report_research ]]; then
+if [ -d /storage/LabJob/Projects/truth_report_research ]; then
 cd /storage/LabJob/Projects/truth_report_research
 else
 cd /home/jeffeuxmlta2020/truth_report_research
