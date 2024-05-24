@@ -29,5 +29,5 @@
     "editor.wordBasedSuggestions": "off",
     "editor.fontWeight": 550,
     // "editor.fontFamily": "'Iosevka Jeff', 'Courier New', monospace",
-    "editor.fontFamily": "'Calibri', 標楷體, Consolas, 'Courier New', monospace"
+    "editor.fontFamily": "Consolas, 'Calibri', 標楷體, Consolas, 'Courier New', monospace"
 }
