@@ -19,15 +19,15 @@
         ".vscode": true,
         // "thesis.tex": true,
     },
-    "editor.fontSize": 18,
     "editor.wrappingIndent": "none",
-    "editor.wordWrapColumn": 70,
-    "editor.wordWrap": "bounded",
     "editor.rulers": [
         { "color": "#FFFF0088", "column": 70 },
     ],
     "editor.wordBasedSuggestions": "off",
-    "editor.fontWeight": 550,
+    // "editor.fontWeight": 550,
     // "editor.fontFamily": "'Iosevka Jeff', 'Courier New', monospace",
-    "editor.fontFamily": "'Calibri', 標楷體, Consolas, 'Courier New', monospace"
+    // "editor.fontFamily": "'Calibri', 標楷體, Consolas, 'Courier New', monospace",
+    // "editor.wordWrapColumn": 70,
+    // "editor.wordWrap": "bounded",
+    // "editor.fontSize": 18,
 }
