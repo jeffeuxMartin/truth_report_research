@@ -1,0 +1,67 @@
+
+
+\section{表徵（Representation）學習與自監督式學習（SSL）}
+
+為了讓機器可以理解輸入的資料，表徵學習是機器學習中不可或缺的一部分。
+本節將從傳統機器學習用來處理語音的升學特徵開始，桌布介紹表語音表徵以及其學習過程的發展歷程。
+
+\subsection{聲學特徵} 這邊直接跟下一個小姐合併
+
+
+
+在語音處理中，在過往機器運算能力還沒有那麼強大的時候，人們基於聲學原理，使用 MFCC 為處理的對象。在文字中則通常使用 TF-IDF
+
+(這邊寫 mfcc 的介紹)
+
+\subsection{表徵學習}
+
+後來 Mikolov 提出了 word2vec 的做法，使用 distributed representation 對文字的單詞（Word）進行編碼，透過大量的文本單詞之間的 co-occurence 去找出每個單詞最適合的語義表徵。其後 ELMo 提出了 contextualized embedding 的想法，更細緻的在單詞本身之外也嘗試對句子脈絡的語義進行詞嵌入（Word embedding）編碼。
+
+\subsection{自監督學習}
+
+爾後在 Transformer 模型被提出後，BERT (cite BERT) 被提出，從大量的文本與自專注機制之中，工程師們便可不借助人為的標記，透過預先設定的 pretext tasks 的引導，使得模型可以自己從大量文本中更細緻、更 contextualized 的自行找出語義關係，並在許多 NLP 的任務上獲得了 SoTA 的成績。自此「self-supervised learning (SSL)」的概念大行其道，這種以 pretext tasks 代替標註資料本身，從大量的未標註資料中利用資料本身結構進行學習的模式成為主流。由於其學習對象是發掘自大量的資料本身，可以更好的利用 NN 的泛化（Generalization）能力去找出什麼樣的資訊對於人們日常應用任務中是重要的並予以保留。
+
+有鑑於文字處理方面的成功有許多的語音處理學者便嘗試將類似的模式套用在語音訊號之上自此提出了很多的語音基石模型而這些藉由語音基石模型得出來的語音表徵，也在很多任務上被證明可以超越傳統上使用的 fbank、 MFCC 等工程特徵，因為大量的語音資料庫本身可以幫助模型去萃取出更適用於各種語音任務上的向量表徵。
+
+依照這些語音自監督模型的學習模式，大致可以分為重建式、預測式與對比式模型，以下分別按照這三類模式介紹這些語音基石模型：
+
+(這邊接下來直接看以前碩論怎麼分。宏毅老師的 review paper 再說）\}
+
+\subsubsection{重建式學習}
+
+此類模型在文字處理以 BERT 為代表，BERT 本身屬於遮罩語言模型（Masked language model，MLM）。在語音中以 Mockingjay、TERA 為主要採取此模式的基石模型。
+
+\subsubsection{預測式學習}
+
+此類模型在文字處理以 GPT 為典型，不同於 BERT 是任意對資料進行擾動作為預訓練任務，這類模型的目標即是單純的自迴歸（Auto-regressive），可以用以下式子來表達其訓練 objective：
+
+\[ \mbox{（寫那個 } y = p(x|x<t) \mbox{ 什麼的式子）} \]
+
+在語音中以 APC 為代表。
+
+（是不是有一個寫法把前兩個都當成預測，只是一個是重建一個是自迴歸？）
+
+\subsubsection{對比式學習}
+
+這類模型以 CPC 為主。在電腦視覺有 BYOL 等等。
+
+\subsection{向量量化（Vector quantization）}這裡也跟下一個小節合併強調輸都累泊的部分
+
+
+
+基於向量本身容易受噪聲擾動而導致訓練不穩定，因此為了穩定訓練，向量量化（Vector quantization）的技巧變常常為機器學習，尤其是語音這邊所使用。例如 vq-wav2vec 與其後的 wav2vec 2.0 就使用了這樣的技巧，HuBERT 本身對語音表徵進行 KMeans clustering 也是一個向量量化的手段。（是不是應該寫一下 KMeans 是什麼？）
+
+（補說一下什麼是 discrete unit）
+
+pseudo-label 
+
+\subsection{離散單元與無文字（Textless）架構}
+
+由於 HuBERT 本身的成功（好像要寫理由？），其後 Meta 提出了完全基於 HuBERT unit 的抽取方式，完全只依賴語音而不依靠文字標註的「無文字（Textless）」架構被提出，其代表作為 GSLM。（好像也要提一下 speech-to-speech 翻譯嗎？）
+
+無文字目前在 QA (cite 實驗室的 DUAL) 跟語音到語音翻譯（Cite 並描述臺語翻英語翻譯）獲得了很好的成功。自此這類「離散單元（Discrete unit）」被視為一項類似文字卻不需要真的依賴人類文字標記的語音表徵，其最大優勢為儲存的 bit rate 低與可以套用 NLP 文字的「語言模型」之訓練模式。
+
+然而，雖然在系統與應用 task 上獲得了很大的成功，但 unit 本身是否已經真的很好的可以替代文字，或能夠多少的幫助 spoken language model 的訓練與建立，仍然是目前本領域探討的焦點議題。有鑑於此，本論文基於語言知識，從最接近文字但又跟語音訊號最密切相關的 phoneme 開始探討，期望對 unit 本身究竟能夠帶給我們什麼特徵、如何幫助後續應用進行進一步的研究。
+
+// 加入 speechtokenizer 嗎？
+
