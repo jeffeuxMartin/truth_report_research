@@ -1,3 +1,210 @@
+@article{baevski2020wav2vec,
+  title={wav2vec 2.0: A framework for self-supervised learning of speech representations},
+  author={Baevski, Alexei and Zhou, Yuhao and Mohamed, Abdelrahman and Auli, Michael},
+  journal={Advances in neural information processing systems},
+  volume={33},
+  pages={12449--12460},
+  year={2020}
+}
+
+@article{van2017neural,
+  title={Neural discrete representation learning},
+  author={Van Den Oord, Aaron and Vinyals, Oriol and others},
+  journal={Advances in neural information processing systems},
+  volume={30},
+  year={2017}
+}
+
+
+@misc{maekaku2022speech,
+      title={Speech Representation Learning Combining Conformer CPC with Deep Cluster for the ZeroSpeech Challenge 2021}, 
+      author={Takashi Maekaku and Xuankai Chang and Yuya Fujita and Li-Wei Chen and Shinji Watanabe and Alexander Rudnicky},
+      year={2022},
+      eprint={2107.05899},
+      archivePrefix={arXiv},
+      primaryClass={cs.SD}
+}
+@misc{zhang2024speechtokenizer,
+      title={SpeechTokenizer: Unified Speech Tokenizer for Speech Large Language Models}, 
+      author={Xin Zhang and Dong Zhang and Shimin Li and Yaqian Zhou and Xipeng Qiu},
+      year={2024},
+      eprint={2308.16692},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+
+@article{lin2022dual,
+  title={DUAL: Discrete spoken unit adaptive learning for textless spoken question answering},
+  author={Lin, Guan-Ting and Chuang, Yung-Sung and Chung, Ho-Lam and Yang, Shu-wen and Chen, Hsuan-Jui and Dong, Shuyan and Li, Shang-Wen and Mohamed, Abdelrahman and Lee, Hung-yi and Lee, Lin-shan},
+  journal={arXiv preprint arXiv:2203.04911},
+  year={2022}
+}
+
+@misc{rivière2020unsupervised,
+      title={Unsupervised pretraining transfers well across languages}, 
+      author={Morgane Rivière and Armand Joulin and Pierre-Emmanuel Mazaré and Emmanuel Dupoux},
+      year={2020},
+      eprint={2002.02848},
+      archivePrefix={arXiv},
+      primaryClass={eess.AS}
+}
+
+@article{baevski2019vq,
+  title={vq-wav2vec: Self-supervised learning of discrete speech representations},
+  author={Baevski, Alexei and Schneider, Steffen and Auli, Michael},
+  journal={arXiv preprint arXiv:1910.05453},
+  year={2019}
+}
+
+
+@article{schneider2019wav2vec,
+  title={wav2vec: Unsupervised Pre-training for Speech Recognition},
+  author={Schneider, Steffen and Baevski, Alexei and Collobert, Ronan and Auli, Michael},
+  year={2019}
+}
+
+
+@article{hsu_hubert_2021-2,
+	title = {Hubert: {Self}-supervised speech representation learning by masked prediction of hidden units},
+	volume = {29},
+	journal = {IEEE/ACM Transactions on Audio, Speech, and Language Processing},
+	author = {Hsu, Wei-Ning and Bolte, Benjamin and Tsai, Yao-Hung Hubert and Lakhotia, Kushal and Salakhutdinov, Ruslan and Mohamed, Abdelrahman},
+	year = {2021},
+	note = {Publisher: IEEE},
+	pages = {3451--3460},
+}
+
+
+@inproceedings{ravanelli_multi-task_2020,
+	title = {Multi-{Task} {Self}-{Supervised} {Learning} for {Robust} {Speech} {Recognition}},
+	doi = {10.1109/ICASSP40776.2020.9053569},
+	abstract = {Despite the growing interest in unsupervised learning, extracting meaningful knowledge from unlabelled audio remains an open challenge. To take a step in this direction, we recently proposed a problem-agnostic speech encoder (PASE), that combines a convolutional encoder followed by multiple neural networks, called workers, tasked to solve self-supervised problems (i.e., ones that do not require manual annotations as ground truth). PASE was shown to capture relevant speech information, including speaker voice-print and phonemes. This paper proposes PASE+, an improved version of PASE for robust speech recognition in noisy and reverberant environments. To this end, we employ an online speech distortion module, that contaminates the input signals with a variety of random disturbances. We then propose a revised encoder that better learns short- and long-term speech dynamics with an efficient combination of recurrent and convolutional networks. Finally, we refine the set of workers used in self-supervision to encourage better cooperation. Results on TIMIT, DIRHA and CHiME-5 show that PASE+ significantly outperforms both the previous version of PASE as well as common acoustic features. Interestingly, PASE+ learns transferable representations suitable for highly mismatched acoustic conditions.},
+	booktitle = {{ICASSP} 2020 - 2020 {IEEE} {International} {Conference} on {Acoustics}, {Speech} and {Signal} {Processing} ({ICASSP})},
+	author = {Ravanelli, Mirco and Zhong, Jianyuan and Pascual, Santiago and Swietojanski, Pawel and Monteiro, Joao and Trmal, Jan and Bengio, Yoshua},
+	month = may,
+	year = {2020},
+	note = {ISSN: 2379-190X},
+	keywords = {Speech processing, speech recognition, Speech recognition, self-supervised learning, Task analysis, Acoustic distortion, Acoustics, Convolution, Noise measurement},
+	pages = {6989--6993},
+}
+
+@inproceedings{chung_generative_2020,
+	title = {Generative {Pre}-{Training} for {Speech} with {Autoregressive} {Predictive} {Coding}},
+	doi = {10.1109/ICASSP40776.2020.9054438},
+	abstract = {Learning meaningful and general representations from unannotated speech that are applicable to a wide range of tasks remains challenging. In this paper we propose to use autoregressive predictive coding (APC), a recently proposed self-supervised objective, as a generative pre-training approach for learning meaningful, non-specific, and transferable speech representations. We pre-train APC on large-scale unlabeled data and conduct transfer learning experiments on three speech applications that require different information about speech characteristics to perform well: speech recognition, speech translation, and speaker identification. Extensive experiments show that APC not only outperforms surface features (e.g., log Mel spectrograms) and other popular representation learning methods on all three tasks, but is also effective at reducing downstream labeled data size and model parameters. We also investigate the use of Transformers for modeling APC and find it superior to RNNs.},
+	booktitle = {{ICASSP} 2020 - 2020 {IEEE} {International} {Conference} on {Acoustics}, {Speech} and {Signal} {Processing} ({ICASSP})},
+	author = {Chung, Yu-An and Glass, James},
+	month = may,
+	year = {2020},
+	note = {ISSN: 2379-190X},
+	keywords = {autoregressive modeling, Data models, pre-training, Predictive coding, representation learning, self-supervised learning, Speech coding, Speech recognition, Task analysis, Training, transfer learning, Transfer learning},
+	pages = {3497--3501},
+}
+
+
+@inproceedings{brown_language_2020,
+	title = {Language {Models} are {Few}-{Shot} {Learners}},
+	volume = {33},
+	url = {https://papers.nips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html},
+	abstract = {We demonstrate that scaling up language models greatly improves task-agnostic, few-shot performance, sometimes even becoming competitive with prior state-of-the-art fine-tuning approaches. Specifically, we train GPT-3, an autoregressive language model with 175 billion parameters, 10x more than any previous non-sparse language model, and test its performance in the few-shot setting.  For all tasks, GPT-3 is applied without any gradient updates or fine-tuning, with tasks and few-shot demonstrations specified purely via text interaction with the model.  GPT-3 achieves strong performance on many NLP datasets, including translation, question-answering, and cloze tasks. We also identify some datasets where GPT-3's few-shot learning still struggles, as well as some datasets where GPT-3 faces methodological issues related to training on large web corpora.},
+	urldate = {2024-05-30},
+	booktitle = {Advances in {Neural} {Information} {Processing} {Systems}},
+	publisher = {Curran Associates, Inc.},
+	author = {Brown, Tom and Mann, Benjamin and Ryder, Nick and Subbiah, Melanie and Kaplan, Jared D and Dhariwal, Prafulla and Neelakantan, Arvind and Shyam, Pranav and Sastry, Girish and Askell, Amanda and Agarwal, Sandhini and Herbert-Voss, Ariel and Krueger, Gretchen and Henighan, Tom and Child, Rewon and Ramesh, Aditya and Ziegler, Daniel and Wu, Jeffrey and Winter, Clemens and Hesse, Chris and Chen, Mark and Sigler, Eric and Litwin, Mateusz and Gray, Scott and Chess, Benjamin and Clark, Jack and Berner, Christopher and McCandlish, Sam and Radford, Alec and Sutskever, Ilya and Amodei, Dario},
+	year = {2020},
+	pages = {1877--1901},
+}
+
+
+@article{radford_language_nodate,
+	title = {Language models are unsupervised multitask learners},
+	author = {Radford, Alec and Wu, Jeffrey and Child, Rewon and Luan, David and Amodei, Dario and Sutskever, Ilya and {others}},
+}
+
+@article{t_tera_2021,
+	title = {{TERA}: {Self}-{Supervised} {Learning} of {Transformer} {Encoder} {Representation} for {Speech}},
+	copyright = {2329-9290 © 2021 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission. See https://www.ieee.org/publications/rights/index.html for more information.},
+	shorttitle = {{TERA}},
+	url = {https://dl.acm.org/doi/10.1109/TASLP.2021.3095662},
+	doi = {10.1109/TASLP.2021.3095662},
+	abstract = {We introduce a self-supervised speech pre-training method called TERA, which stands
+for Transformer Encoder Representations from Alteration. Recent approaches often learn
+by using a single auxiliary task like contrastive prediction, autoregressive ...},
+	language = {EN},
+	urldate = {2024-05-30},
+	journal = {IEEE/ACM Transactions on Audio, Speech, and Language Processing},
+	author = {T, LiuAndy and LiShang-Wen and LeeHung-yi},
+	year = {2021},
+	note = {Publisher: IEEE},
+	file = {送出的版本:C\:\\Users\\ChienChengChen\\Zotero\\storage\\DN229NUL\\T 等。 - 2021 - TERA Self-Supervised Learning of Transformer Enco.pdf:application/pdf;Snapshot:C\:\\Users\\ChienChengChen\\Zotero\\storage\\EXVUC8IV\\TASLP.2021.html:text/html},
+}
+
+    @misc{liu_mockingjay_2019,
+	title = {Mockingjay: {Unsupervised} {Speech} {Representation} {Learning} with {Deep} {Bidirectional} {Transformer} {Encoders}},
+	shorttitle = {Mockingjay},
+	url = {https://arxiv.org/abs/1910.12638v2},
+	abstract = {We present Mockingjay as a new speech representation learning approach, where bidirectional Transformer encoders are pre-trained on a large amount of unlabeled speech. Previous speech representation methods learn through conditioning on past frames and predicting information about future frames. Whereas Mockingjay is designed to predict the current frame through jointly conditioning on both past and future contexts. The Mockingjay representation improves performance for a wide range of downstream tasks, including phoneme classification, speaker recognition, and sentiment classification on spoken content, while outperforming other approaches. Mockingjay is empirically powerful and can be fine-tuned with downstream models, with only 2 epochs we further improve performance dramatically. In a low resource setting with only 0.1\% of labeled data, we outperform the result of Mel-features that uses all 100\% labeled data.},
+	language = {en},
+	urldate = {2024-05-30},
+	journal = {arXiv.org},
+	author = {Liu, Andy T. and Yang, Shu-wen and Chi, Po-Han and Hsu, Po-chun and Lee, Hung-yi},
+	month = oct,
+	year = {2019},
+	doi = {10.1109/ICASSP40776.2020.9054458},
+	file = {Full Text PDF:C\:\\Users\\ChienChengChen\\Zotero\\storage\\K25WEQYZ\\Liu 等。 - 2019 - Mockingjay Unsupervised Speech Representation Lea.pdf:application/pdf},
+}
+
+@inproceedings{devlin_bert_2019,
+	address = {Minneapolis, Minnesota},
+	title = {{BERT}: {Pre}-training of {Deep} {Bidirectional} {Transformers} for {Language} {Understanding}},
+	shorttitle = {{BERT}},
+	url = {https://aclanthology.org/N19-1423},
+	doi = {10.18653/v1/N19-1423},
+	abstract = {We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models (Peters et al., 2018a; Radford et al., 2018), BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications. BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5 (7.7 point absolute improvement), MultiNLI accuracy to 86.7\% (4.6\% absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement).},
+	urldate = {2024-05-30},
+	booktitle = {Proceedings of the 2019 {Conference} of the {North} {American} {Chapter} of the {Association} for {Computational} {Linguistics}: {Human} {Language} {Technologies}, {Volume} 1 ({Long} and {Short} {Papers})},
+	publisher = {Association for Computational Linguistics},
+	author = {Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
+	editor = {Burstein, Jill and Doran, Christy and Solorio, Thamar},
+	month = jun,
+	year = {2019},
+	pages = {4171--4186},
+	file = {Full Text PDF:C\:\\Users\\ChienChengChen\\Zotero\\storage\\NJWNWKCD\\Devlin 等。 - 2019 - BERT Pre-training of Deep Bidirectional Transform.pdf:application/pdf},
+}
+
+
+@inproceedings{peters_deep_2018,
+	address = {New Orleans, Louisiana},
+	title = {Deep {Contextualized} {Word} {Representations}},
+	url = {https://aclanthology.org/N18-1202},
+	doi = {10.18653/v1/N18-1202},
+	abstract = {We introduce a new type of deep contextualized word representation that models both (1) complex characteristics of word use (e.g., syntax and semantics), and (2) how these uses vary across linguistic contexts (i.e., to model polysemy). Our word vectors are learned functions of the internal states of a deep bidirectional language model (biLM), which is pre-trained on a large text corpus. We show that these representations can be easily added to existing models and significantly improve the state of the art across six challenging NLP problems, including question answering, textual entailment and sentiment analysis. We also present an analysis showing that exposing the deep internals of the pre-trained network is crucial, allowing downstream models to mix different types of semi-supervision signals.},
+	urldate = {2024-05-30},
+	booktitle = {Proceedings of the 2018 {Conference} of the {North} {American} {Chapter} of the {Association} for {Computational} {Linguistics}: {Human} {Language} {Technologies}, {Volume} 1 ({Long} {Papers})},
+	publisher = {Association for Computational Linguistics},
+	author = {Peters, Matthew E. and Neumann, Mark and Iyyer, Mohit and Gardner, Matt and Clark, Christopher and Lee, Kenton and Zettlemoyer, Luke},
+	editor = {Walker, Marilyn and Ji, Heng and Stent, Amanda},
+	month = jun,
+	year = {2018},
+	pages = {2227--2237},
+	file = {Full Text PDF:C\:\\Users\\ChienChengChen\\Zotero\\storage\\82CY5Y9L\\Peters 等。 - 2018 - Deep Contextualized Word Representations.pdf:application/pdf},
+}
+
+@misc{mikolov_efficient_2013,
+	title = {Efficient {Estimation} of {Word} {Representations} in {Vector} {Space}},
+	url = {http://arxiv.org/abs/1301.3781},
+	doi = {10.48550/arXiv.1301.3781},
+	abstract = {We propose two novel model architectures for computing continuous vector representations of words from very large data sets. The quality of these representations is measured in a word similarity task, and the results are compared to the previously best performing techniques based on different types of neural networks. We observe large improvements in accuracy at much lower computational cost, i.e. it takes less than a day to learn high quality word vectors from a 1.6 billion words data set. Furthermore, we show that these vectors provide state-of-the-art performance on our test set for measuring syntactic and semantic word similarities.},
+	urldate = {2024-05-30},
+	publisher = {arXiv},
+	author = {Mikolov, Tomas and Chen, Kai and Corrado, Greg and Dean, Jeffrey},
+	month = sep,
+	year = {2013},
+	note = {arXiv:1301.3781 [cs]},
+	keywords = {Computer Science - Computation and Language},
+	file = {arXiv Fulltext PDF:C\:\\Users\\ChienChengChen\\Zotero\\storage\\JY2B9ND7\\Mikolov 等。 - 2013 - Efficient Estimation of Word Representations in Ve.pdf:application/pdf},
+}
+
 
 @article{chorowski_unsupervised_2019,
 	title = {Unsupervised speech representation learning using wavenet autoencoders},

@@ -6,8 +6,16 @@
 放一些 rate 的東西
 
 
+在现有的语音表征方法中，单一的离散单元虽然在许多任务中表现良好，但在处理长序列和时间分辨率方面存在局限性。Ren 等人的研究表明，许多相似的模式是以连续几个单元的形式出现的，这提示我们可以通过组合多个离散单元来更好地表示语音信号，从而提高模型在语音识别和语音翻译等任务中的性能 (\href{https://www.isca-archive.org/interspeech_2022/ren22_interspeech.html}{ISCA Archive}) (\href{https://deepai.org/publication/speech-pre-training-with-acoustic-piece}{DeepAI})。此外，SpeechTokenizer 的研究进一步展示了通过分层建模不同信息层次，能够在语音表示中捕捉到更丰富的语义和语音学信息 (\href{https://ar5iv.org/pdf/2308.16692}{ar5iv})。 
+
 
 \section{相關研究}
 
 \subsection{對語音離散表徵的分詞（tokenization）研究}
+
+Ren 等人提出了使用声学片段（acoustic pieces）作为预训练的目标标签，通过对 HuBERT 代码进行句子片段化处理得到，能够显著改善自动语音识别（ASR）的性能 (\href{https://www.isca-archive.org/interspeech_2022/ren22_interspeech.html}{ISCA Archive})。Wu 等人介绍了 Wav2Seq，这是一种自监督方法，通过伪语言（pseudo languages）预训练编码器和解码器，显著提升了 ASR 和语音到文本翻译的性能 (\href{https://deepai.org/publication/speech-pre-training-with-acoustic-piece}{DeepAI})。
+
+BEATs 提出了音频预训练方法，通过声学分片（acoustic tokenizers）学习音频离散表示，用于各种音频分类任务，表现出色 (\href{https://ar5iv.org/abs/2212.09058}{ar5iv})。
+
+SpeechTokenizer 利用层级建模和语义蒸馏技术，通过多层残差量化器（RVQ）捕捉不同层次的信息，从而在语音表示中实现更高的语义和语音学特征保真度 (\href{https://ar5iv.org/pdf/2308.16692}{ar5iv})。
 
