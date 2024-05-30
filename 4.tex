@@ -65,14 +65,14 @@ SpeechTokenizer 利用层级建模和语义蒸馏技术，通过多层残差量�
     \item \textbf{音位长条图（Phoneme Bar Chart）}：对单元进行频率统计，以了解每个单元在不同音位上的分布情况。
     \item \textbf{纯度（Purity）}：计算每个 cluster 单元内的音位纯度，以衡量单元对特定音位的代表性。 
 
-\textbackslash{}Epz(j)[py∣z(y∗(j)∣j)]\textbackslash{}E\_{p\_z(j)\}\left[p\_{y|z\}(y\^*(j)|j) \textbackslash{}right]\textbackslash{}Epz(j)[py∣z(y∗(j)∣j)] 
+% \textbackslash{}Epz(j)[py∣z(y∗(j)∣j)]\textbackslash{}E\_{p\_z(j)\}\left[p\_{y|z\}(y\^*(j)|j) \textbackslash{}right]\textbackslash{}Epz(j)[py∣z(y∗(j)∣j)] 
 
 以及每个音位对 cluster 的纯度，衡量音位在 cluster 中的一致性。
-\textbackslash{}Epy(i)[pz∣y(z∗(i)∣i)]\textbackslash{}E\_{p\_y(i)\}\left[p\_{z|y\}(z\^*(i)|i) \textbackslash{}right]\textbackslash{}Epy(i)[pz∣y(z∗(i)∣i)]
+% \textbackslash{}Epy(i)[pz∣y(z∗(i)∣i)]\textbackslash{}E\_{p\_y(i)\}\left[p\_{z|y\}(z\^*(i)|i) \textbackslash{}right]\textbackslash{}Epy(i)[pz∣y(z∗(i)∣i)]
 
     \item \textbf{熵（Entropy）和相互信息（Mutual Information, MI）}：从信息论角度探讨单元提供了多少背后音位的信息。 
 
-I(y;z)H(y)=∑i∑jpyz(i,j)log⁡pyz(i,j)py(i)pz(j)∑ipy(i)log⁡py(i)\textbackslash{}frac\{I(y;z)\}{H(y)\}=\textbackslash{}cfrac\{\sum\_i \textbackslash{}sum\_j p\_{yz\}(i, j) \textbackslash{}log \textbackslash{}cfrac\{p\_{yz\}(i, j)\}{p\_y(i)p\_z(j)\}}\{\sum\_i p\_y(i) \textbackslash{}log p\_y(i)\}H(y)I(y;z)=∑ipy(i)logpy(i)∑i∑jpyz(i,j)logpy(i)pz(j)pyz(i,j) \textbackslash{}begin\{align\} \textbackslash{}frac\{I(y;z)\}{H(y)\}&=\textbackslash{}cfrac\{\sum\_i \textbackslash{}sum\_j p\_{yz\}(i, j) \textbackslash{}log \textbackslash{}cfrac\{p\_{yz\}(i, j)\}{p\_y(i)p\_z(j)\}}\{\sum\_i p\_y(i) \textbackslash{}log p\_y(i)\} \textbackslash{} \&=\textbackslash{}frac\{H(y)-H(y|z)\}{H(y)\} \textbackslash{} \&=1-\textbackslash{}frac\{H(y|z)\}{H(y)\} \textbackslash{}end\{align\}
+% I(y;z)H(y)=∑i∑jpyz(i,j)log⁡pyz(i,j)py(i)pz(j)∑ipy(i)log⁡py(i)\textbackslash{}frac\{I(y;z)\}{H(y)\}=\textbackslash{}cfrac\{\sum\_i \textbackslash{}sum\_j p\_{yz\}(i, j) \textbackslash{}log \textbackslash{}cfrac\{p\_{yz\}(i, j)\}{p\_y(i)p\_z(j)\}}\{\sum\_i p\_y(i) \textbackslash{}log p\_y(i)\}H(y)I(y;z)=∑ipy(i)logpy(i)∑i∑jpyz(i,j)logpy(i)pz(j)pyz(i,j) \textbackslash{}begin\{align\} \textbackslash{}frac\{I(y;z)\}{H(y)\}&=\textbackslash{}cfrac\{\sum\_i \textbackslash{}sum\_j p\_{yz\}(i, j) \textbackslash{}log \textbackslash{}cfrac\{p\_{yz\}(i, j)\}{p\_y(i)p\_z(j)\}}\{\sum\_i p\_y(i) \textbackslash{}log p\_y(i)\} \textbackslash{} \&=\textbackslash{}frac\{H(y)-H(y|z)\}{H(y)\} \textbackslash{} \&=1-\textbackslash{}frac\{H(y|z)\}{H(y)\} \textbackslash{}end\{align\}
 \end{enumerate}
 
 \subsection{壓縮比率}
