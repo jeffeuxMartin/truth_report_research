@@ -1,24 +1,16 @@
 \setcounter{chapter}{2}\mysccnt{2}
-
-\section{表徵（Representation）學習與自監督式學習（SSL）}
+\section{\textcolor{gray}{表徵學習與自監督式學習（SSL）}}
 
 為了讓機器可以理解輸入的資料，表徵學習是機器學習中不可或缺的一部分。
-本節將從傳統機器學習用來處理語音的升學特徵開始，桌布介紹表語音表徵以及其學習過程的發展歷程。
+本節將從傳統機器學習用來處理語音的聲學特徵開始，逐步介紹表語音表徵以及其學習過程的發展歷程。
 
+\subsection{\textcolor{lime}{聲學特徵與表徵學習（Representation）}}
 
-\subsection{聲學特徵} 這邊直接跟下一個小姐合併
-
-
-
-在語音處理中，在過往機器運算能力還沒有那麼強大的時候，人們基於聲學原理，使用 MFCC 為處理的對象。在文字中則通常使用 TF-IDF
-
-(這邊寫 mfcc 的介紹)
-
-\subsection{表徵學習}
+在語音處理中，在過往機器運算能力還沒有那麼強大的時候，人們基於聲學原理，使用 MFCC 為處理的對象。在文字中則通常使用 TF-IDF。  % (這邊寫 mfcc 的介紹)
 
 後來 Mikolov 提出了 word2vec 的做法，使用 distributed representation 對文字的單詞（Word）進行編碼，透過大量的文本單詞之間的 co-occurence 去找出每個單詞最適合的語義表徵。其後 ELMo 提出了 contextualized embedding 的想法，更細緻的在單詞本身之外也嘗試對句子脈絡的語義進行詞嵌入（Word embedding）編碼。
 
-\subsection{自監督學習}
+\subsection{\textcolor{lime}{自監督學習}}
 
 爾後在 Transformer 模型被提出後，BERT (cite BERT) 被提出，從大量的文本與自專注機制之中，工程師們便可不借助人為的標記，透過預先設定的 pretext tasks 的引導，使得模型可以自己從大量文本中更細緻、更 contextualized 的自行找出語義關係，並在許多 NLP 的任務上獲得了 SoTA 的成績。自此「self-supervised learning (SSL)」的概念大行其道，這種以 pretext tasks 代替標註資料本身，從大量的未標註資料中利用資料本身結構進行學習的模式成為主流。由於其學習對象是發掘自大量的資料本身，可以更好的利用 NN 的泛化（Generalization）能力去找出什麼樣的資訊對於人們日常應用任務中是重要的並予以保留。
 
@@ -26,7 +18,7 @@
 
 依照這些語音自監督模型的學習模式，大致可以分為重建式、預測式與對比式模型，以下分別按照這三類模式介紹這些語音基石模型：
 
-(這邊接下來直接看以前碩論怎麼分。宏毅老師的 review paper 再說）\}
+(這邊接下來直接看以前碩論怎麼分。宏毅老師的 review paper 再說）
 
 \subsubsection{重建式學習}
 
@@ -46,7 +38,7 @@
 
 這類模型以 CPC 為主。在電腦視覺有 BYOL 等等。
 
-\subsection{向量量化（Vector quantization）}這裡也跟下一個小節合併強調輸都累泊的部分
+\subsection{\textcolor{lime}{向量量化（Vector quantization）}} 這裡也跟下一個小節合併強調輸都累泊的部分
 
 
 
@@ -56,7 +48,7 @@
 
 pseudo-label 
 
-\subsection{離散單元與無文字（Textless）架構}
+\subsection{\textcolor{lime}{離散單元與無文字（Textless）架構}}
 
 由於 HuBERT 本身的成功（好像要寫理由？），其後 Meta 提出了完全基於 HuBERT unit 的抽取方式，完全只依賴語音而不依靠文字標註的「無文字（Textless）」架構被提出，其代表作為 GSLM。（好像也要提一下 speech-to-speech 翻譯嗎？）
 

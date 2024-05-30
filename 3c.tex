@@ -1,4 +1,74 @@
 
+\section{衡量方式（metric）}
+
+為了測量這些 unit 跟 phn 這類語言學 labels 之間的 correlation，我們需要先介紹本論文會探討的指標
+
+\subsection{音位（phoneme）長條圖（bar chart）}
+
+要先對 unit 做頻率上的統計
+
+\subsection{純度（purity）}
+
+
+phoneme purity: 每個cluster unit內的phoneme purity，代表此unit是否有phoneme代表性
+
+% Expectation symbol
+\newcommand{\E}{\mathbb{E}}
+
+$$\E_{p_z(j)}\left[p_{y|z}(y^*(j)|j) \right]$$
+
+cluster purity：每個phoneme對應到的cluster統計，若cluster purity低代表less liguistical meaning?單一 phoneme 本身對應的 unit 的一致性。如果
+
+$$\E_{p_y(i)}\left[p_{z|y}(z^*(i)|i) \right]$$
+
+\subsection{熵（entropy）和相互資訊（mutual information，MI）}
+
+除了「最大」的對應關係，根據 Hubert 原先的 paper CITEME (hubert) 中的分析方式，我們也可以從 info theory 的角度，去探討「觀察到一個 unit 對於 label 不確定性的降低」來考慮 unit 本身提供了多少背後 phn 的資訊
+
+$$\frac{I(y;z)}{H(y)}=\cfrac{\sum_i \sum_j p_{yz}(i, j) \log \cfrac{p_{yz}(i, j)}{p_y(i)p_z(j)}}{\sum_i p_y(i) \log p_y(i)}$$
+
+\begin{align}
+\frac{I(y;z)}{H(y)}&=\cfrac{\sum_i \sum_j p_{yz}(i, j) \log \cfrac{p_{yz}(i, j)}{p_y(i)p_z(j)}}{\sum_i p_y(i) \log p_y(i)} \\
+&=\frac{H(y)-H(y|z)}{H(y)} \\
+&=1-\frac{H(y|z)}{H(y)}
+\end{align}
+
+
+
+\subsection{對齊（alignment）}
+cluster是否保留segment資訊，不將不同phoneme合併
+segmentation $\rightarrow$
+怕說只是每個 frame 本身 unit 或 piece 可以跟 phoeneme 特徵相關，但放在連續的語音中被切得很碎/前後文相關的東西不知道有沒有抓到
+
+要計算 phoneme alignment ，我們參考 CITMEALIGNM 本身需要考慮 P 值、R 值 等，以下說明如下：
+
+(算 alignment 的一些介紹)
+
+\section{語音學分類（phone type）}
+
+\subsection{簡介}
+
+除了單一 phn 本身的特性以外，由於 phn 本身彼此不是完全獨立的，而是彼此之間就存在相似的特徵，可以分成幾個組別。因此，依照 CITEME (tanghao等三篇) 的分組方式，對英語的 phn 進行分類並合併比對數據，看看這些 unit 本身是否有 capture 到相似的發聲特徵，而不單純只是把 phn 分成約五十類完全獨立的標籤。（基於語音表徵本身就是 acoustic sisgnals 來的，應該 by nature 要可以對語音特徵分組吧？）
+
+以下為各分組進行簡單介紹：
+
+\subsubsection{consonants}
+
+子音可以分成五類
+
+\subsubsection{vowels}
+
+母音在這邊為了簡單起見，會被分在一起？
+
+\subsection{解釋意義}
+
+\begin{itemize}
+    \item 純度（purity）：換成type之後有何變化（關聯性更強？）
+    \item 熵（entropy）（放直方圖解釋） --> phone type更明顯？
+    \item 對齊（alignment）：是否減少segment資訊的保留（連續子音母音被合併？
+\end{itemize}
+
+
 \section{分析結果}
  
 \subsection{基於各自音位的分析}
