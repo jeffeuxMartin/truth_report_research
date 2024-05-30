@@ -1,0 +1,47 @@
+\contentsline {chapter}{\numberline {一、}導論}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}研究動機}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}研究方向}{5}{section.1.2}%
+\contentsline {section}{\numberline {1.3}主要貢獻}{6}{section.1.3}%
+\contentsline {section}{\numberline {1.4}章節安排}{7}{section.1.4}%
+\contentsline {chapter}{\numberline {二、}背景知識}{8}{chapter.2}%
+\contentsline {section}{\numberline {2.1}深層類神經網路}{8}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}簡介}{8}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}卷積式類神經網路}{10}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}遞迴式類神經網路與序列至序列（Sequence-to-sequence，Seq2seq）模型}{11}{subsection.2.1.3}%
+\contentsline {subsubsection}{遞迴式類神經網路}{11}{section*.4}%
+\contentsline {subsubsection}{序列至序列（Sequence-to-sequence，Seq2seq）模型}{12}{section*.5}%
+\contentsline {subsection}{\numberline {2.1.4}專注機制（Attention Mechanism）與轉換器（Transformer）類神經網路}{13}{subsection.2.1.4}%
+\contentsline {subsubsection}{專注機制}{13}{section*.6}%
+\contentsline {subsubsection}{轉換器類神經網路}{13}{section*.7}%
+\contentsline {section}{\numberline {2.2}表徵與自監督式學習}{15}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}特徵抽取與表徵學習 }{15}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}自監督學習}{16}{subsection.2.2.2}%
+\contentsline {subsubsection}{重建式學習（Reconstruction Learning）}{17}{section*.9}%
+\contentsline {subsubsection}{預測式學習（Predictive Learning）}{17}{section*.10}%
+\contentsline {subsubsection}{對比式學習（Contrastive Learning）}{18}{section*.11}%
+\contentsline {subsection}{\numberline {2.2.3}向量量化與離散單元}{19}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}離散單元與無文字（Textless）架構}{20}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}本章節總結}{20}{section.2.3}%
+\contentsline {chapter}{\numberline {三、}單一語音離散表徵與語音標記的對應模式}{22}{chapter.3}%
+\contentsline {section}{\numberline {3.1}動機簡介}{22}{section.3.1}%
+\contentsline {section}{\numberline {3.2}相關研究}{22}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}語音表徵的語音學分析}{22}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}無文字（textless）語言模型}{23}{subsection.3.2.2}%
+\contentsline {subsubsection}{相关研究}{23}{section*.12}%
+\contentsline {paragraph}{语音表征的语言学分析}{23}{section*.13}%
+\contentsline {paragraph}{无文字（Textless）语言模型}{24}{section*.14}%
+\contentsline {section}{\numberline {3.3}衡量方式（metric）}{24}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}音位（phoneme）長條圖（bar chart）}{24}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}純度（purity）}{24}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}熵（entropy）和相互資訊（mutual information，MI）}{24}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}對齊（alignment）}{25}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}語音學分類（phone type）}{25}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}簡介}{25}{subsection.3.4.1}%
+\contentsline {subsubsection}{consonants}{26}{section*.15}%
+\contentsline {subsubsection}{vowels}{26}{section*.16}%
+\contentsline {subsection}{\numberline {3.4.2}解釋意義}{26}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}分析結果}{26}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}基於各自音位的分析}{26}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}基於語音學分類的分析}{27}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}本章總結}{27}{section.3.6}%
+\contentsline {chapter}{參考文獻}{28}{section*.17}%
