@@ -10,7 +10,7 @@ ntuthesis.sty
 thesis.bib
 thesis.pdf
 thesis.synctex.gz
-thesis.tex
+main.tex
 
 ================
 
@@ -60,7 +60,7 @@ thesis.pdf
 │   ├── myconfig.txt
 │   ├── old_materials
 │   │   ├── old_thesis.bib.txt
-│   │   └── REALthesis.tex.txt
+│   │   └── REALmain.tex.txt
 │   ├── outfile
 │   │   └── 乖乖寫的研究成果 _Real Ch1_ver1.pdf
 │   ├── running_latex.py
@@ -87,7 +87,7 @@ thesis.pdf
 ├── thesis.bib
 ├── thesis.pdf
 ├── thesis.synctex.gz
-└── thesis.tex
+└── main.tex
 
 15 directories, 49 files
 
@@ -143,7 +143,7 @@ thesis.pdf
 ├── thesis.bib
 ├── thesis.pdf
 ├── thesis.synctex.gz
-├── thesis.tex
+├── main.tex
 └── .vscode
     ├── keybindings.json
     ├── launch.json
