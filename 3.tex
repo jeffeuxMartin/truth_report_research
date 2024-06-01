@@ -34,18 +34,24 @@
 　　首先是純度（Purity）、熵（Entropy）和相互資訊（Mutual Information，MI），這類標準是在原始 HuBERT 論文中採用的指標 \cite{hsu_hubert_2021, hsu_hubert_2021-2}，在比對機器學習過程得到的偽標記與人類知識的標註之間，兩者的相關性（Correlation）。以下對各標準進行詳細解釋：
 
         不論是什麼語音基石模型，語音表徵的基本單位是音框（Frame）。因此一段語句（Utterance）的語音的離散單元被表示為 $[y_1, \cdots\cdots, y_T]$。其中 $T$ 是該段語句的音框總數。對於該段語句，若給予一段在音框上對齊的語音學標註（Phonetic Label） $[z_1, \cdots\cdots, z_T]$，此時我們可以將離散單元與標註之間配對的出現次數，寫為一個雙變數的共同分佈（Joint Distribution）
-$$p_{yz} = \frac{\sum^T_{t=1}[{y_t = i \wedge z_t = j}]}{T}$$
+    \begin{align}
+      p_{yz} = \frac{\sum^T_{t=1}[{y_t = i \wedge z_t = j}]}{T}
+    \end{align}
 
 其中 $i$ 是第 $i$ 個音位類別，而 $j$ 指編號為$j$的離散單元。兩個變數的邊際機率（Marginal Probability）分別為
-\begin{align}
-    p_z(j)=\sum_i{p_{yz}(i, j)}
-p_y(i)=\sum_j{p_{yz}(i, j)}
+    \begin{align}
+        p_z(j)=\sum_i{p_{yz}(i, j)}
+    p_y(i)=\sum_j{p_{yz}(i, j)}
 \end{align}
 
 因此，對於每一個音位 $i$ 而言，這個音位對應最可能的離散單元為
- $$z^\ast(i) = \arg\max_j p_{yz}(i, j)$$
+    \begin{align}
+      z^\ast(i) = \arg\max_j p_{yz}(i, j)
+    \end{align}
 與之相對應的，對於每一個離散單元的類別 $j$ 則可以找到機率最高的音位
-$$y^\ast(j) = \arg\max_i p_{yz}(i,j)$$
+    \begin{align}
+      y^\ast(j) = \arg\max_i p_{yz}(i,j)
+    \end{align}
 
 於是我們可以計算出以下指標：
 
@@ -57,7 +63,9 @@ $$y^\ast(j) = \arg\max_i p_{yz}(i,j)$$
 
         考慮每個離散單元對應的音位中，最高機率音位的機率，表示為
 
-$$\mathbb{E}_{p_z(j)}\left[p_{y|z}(y^*(j)|j) \right]$$
+    \begin{align}
+      \mathbb{E}_{p_z(j)}\left[p_{y|z}(y^*(j)|j) \right]
+    \end{align}
 
 此指標表示該單元是否對與它對應的音位有足夠的代表性。
 
@@ -65,7 +73,9 @@ $$\mathbb{E}_{p_z(j)}\left[p_{y|z}(y^*(j)|j) \right]$$
 
         與音位純度相對，改以每個音位的角度，考慮對應單元類別的機率
 
-$$\mathbb{E}_{p_y(i)}\left[p_{z|y}(z^*(i)|i) \right]$$
+    \begin{align}
+      \mathbb{E}_{p_y(i)}\left[p_{z|y}(z^*(i)|i) \right]
+    \end{align}
 
         由於離散表徵進行分群演算法時的類別數是一項超參數（Hyperparameter），且通常離散單元的分群數量會比音位多，因此該統計數據本身不直接具有語音學的解釋意義，而且在分群數量很多時會顯著下降。
 
@@ -79,18 +89,18 @@ $$\mathbb{E}_{p_y(i)}\left[p_{z|y}(z^*(i)|i) \right]$$
 
 　　熵的定義按照資訊理論，衡量兩個序列中標籤類別出現機率的不確定性（Uncertainty），公式寫作：
 
-\begin{align}
-    H(y) = \sum_i{p_y(i)\log p_y(i)}
-    H(z) = \sum_j{p_z(j)\log p_z(j)}
+    \begin{align}
+        H(y) = \sum_i{p_y(i)\log p_y(i)}
+        H(z) = \sum_j{p_z(j)\log p_z(j)}
 \end{align}
 $H(y)$ 和 $H(z)$ 分別為音位和離散單元的熵。
 
 \paragraph{以音位標準化之相互資訊（Phone-normalized Mutual Information，PNMI）}
 
 　　本數據以「觀察到某一個離散單元，能降低多少音位標註的不確定性」，定義該離散單元的出現背後提供了多少音位的資訊。公式寫為：
-\begin{align}
-\frac{I(y;z)}{H(y)}&=\cfrac{\sum_i \sum_j p_{yz}(i, j) \log \cfrac{p_{yz}(i, j)}{p_y(i)p_z(j)}}{\sum_i p_y(i) \log p_y(i)} \\
-&=\frac{H(y)-H(y|z)}{H(y)} \\
+    \begin{align}
+    \frac{I(y;z)}{H(y)}&=\cfrac{\sum_i \sum_j p_{yz}(i, j) \log \cfrac{p_{yz}(i, j)}{p_y(i)p_z(j)}}{\sum_i p_y(i) \log p_y(i)} \\
+    &=\frac{H(y)-H(y|z)}{H(y)} \\
 &=1-\frac{H(y|z)}{H(y)}
 \end{align}
 
