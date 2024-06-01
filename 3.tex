@@ -1,6 +1,7 @@
-% phone type
 % alignment
+% mycites
 % 最後！處理數據作圖…！！ 是要多久……啊就那樣
+% phone type
 
 \chapter{單一語音離散表徵與音位的關係}  % 與語音標記的對應模式
 
@@ -83,7 +84,7 @@
 
 　　除了純度提供「最高機率」的對應關係，根據 HuBERT 論文 \cite{hsu_hubert_2021-2} 中的分析方式，我們也可以從資訊理論（Information Theory）的角度，觀察兩個序列的熵和相互資訊。
 
-\paragraph{熵}
+\paragraph{熵（Entropy）}
 
 　　熵的定義按照資訊理論，衡量兩個序列中標籤類別出現機率的不確定性（Uncertainty），公式寫作：
 
@@ -109,19 +110,30 @@
 
 \section{實驗集與分析模型}
 
-　　本研究的分析對象參考無文字架構 \cite{noauthor_textless_2021, lakhotia_generative_2021, lakhotia_generative_2021-1}  研究，採用當中提及的 CPC、Wav2vec 2.0 和 HuBERT 三個語音基石模型，並與作為比對的聲學特徵梅爾時頻譜（Mel-Spectrogram），一共四種語音表徵模型。
+　　本研究的分析對象參考無文字架構 \cite{noauthor_textless_2021, lakhotia_generative_2021, lakhotia_generative_2021-1}  研究，採用當中提及的 CPC、Wav2vec 2.0 和 HuBERT 三個語音基石模型，並與作為比對的聲學特徵梅爾時頻譜（Mel-Spectrogram），一共四種語音表徵模型。模型的詳細資訊如 \ref{tab:model-info} 所示：
 
-    \begin{align}
-        \text{((寫一下 resolution 跟層數))}
-    \end{align}
-
+\begin{table}
+    \centering
+    \begin{tabular}{ccc}
+         語音表徵&  離散表徵來源層數& 時間解析度（Time Resolution）\\
+         HuBERT      
+&  6& 20 毫秒\\
+         wav2vec 2.0 
+&  14& 20 毫秒\\
+         CPC         
+&  2& 10 毫秒\\
+         LogMel      &  N/A& 10 毫秒\\
+    \end{tabular}
+    \caption{語音離散表徵的來源層數與音框時間解析度}
+    \label{tab:model-info}
+\end{table}
 此後亦跟隨該研究選用特定模型層數，和其釋出的K-平均量化模型。這些模型層數與量化為該研究中被證明與語音學特徵最相關，且被使用於無文字架構後續研究之語音離散表徵的抽取方法。無文字研究中已透過 (某某) 語料對四種語音表徵進行 K-平均分群演算法，分別得到群數為 50、100 和 200 的三個量化模型。
 
         本論文以公開的 LibriSpeech 資料集為分析對象，採取其 train-clean-100 為分析的語音語料庫。
 % 因此，
 本研究將語音語料庫的語音資料經過四個模型獲取連續表徵後，再經過量化模型得到完全由離散單元組成的「偽文字」語料。
 
-        針對語音學的音位標註，吾人透過 Montreal 強迫對齊器（Forced-Aligner） [[CITE montreal]] 的英語預訓練模型， 從語料庫的文字轉寫 取得 語音資料的音位標註 與對應的時間範圍。 最後透過 語音表徵各自的 時間解析度 生成 以音框為單位的 音位標註語料。最後將兩者對語音資料集進行音位標註相關性的分析。
+        針對語音學的音位標註，透過強迫對齊器（Forced-aligner）\footnote{https://github.com/MontrealCorpusTools/Montreal­Forced­Aligner } 的英語預訓練模型， 從語料庫的文字轉寫 取得 語音資料的音位標註 與對應的時間範圍。 最後透過 語音表徵各自的 時間解析度 生成 以音框為單位的 音位標註語料。最後將兩者對語音資料集進行音位標註相關性的分析。
 
 \section{分析結果}
 
