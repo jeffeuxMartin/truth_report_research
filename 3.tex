@@ -62,7 +62,6 @@
 \paragraph{音位純度（Phoneme Purity）}
 
         考慮每個離散單元對應的音位中，最高機率音位的機率，表示為
-
     \begin{align}
       \mathbb{E}_{p_z(j)}\left[p_{y|z}(y^*(j)|j) \right]
     \end{align}
@@ -72,7 +71,6 @@
 \paragraph{分群純度（Cluster Purity）}
 
         與音位純度相對，改以每個音位的角度，考慮對應單元類別的機率
-
     \begin{align}
       \mathbb{E}_{p_y(i)}\left[p_{z|y}(z^*(i)|i) \right]
     \end{align}
@@ -92,26 +90,31 @@
     \begin{align}
         H(y) = \sum_i{p_y(i)\log p_y(i)}
         H(z) = \sum_j{p_z(j)\log p_z(j)}
-\end{align}
-$H(y)$ 和 $H(z)$ 分別為音位和離散單元的熵。
+    \end{align}
+式子中 $H(y)$ 和 $H(z)$ 分別為音位和離散單元的熵。
 
 \paragraph{以音位標準化之相互資訊（Phone-normalized Mutual Information，PNMI）}
 
 　　本數據以「觀察到某一個離散單元，能降低多少音位標註的不確定性」，定義該離散單元的出現背後提供了多少音位的資訊。公式寫為：
     \begin{align}
-    \frac{I(y;z)}{H(y)}&=\cfrac{\sum_i \sum_j p_{yz}(i, j) \log \cfrac{p_{yz}(i, j)}{p_y(i)p_z(j)}}{\sum_i p_y(i) \log p_y(i)} \\
-    &=\frac{H(y)-H(y|z)}{H(y)} \\
-&=1-\frac{H(y|z)}{H(y)}
-\end{align}
+        \frac{I(y;z)}{H(y)}&=\cfrac{\sum_i \sum_j p_{yz}(i, j) \log \cfrac{p_{yz}(i, j)}{p_y(i)p_z(j)}}{\sum_i p_y(i) \log p_y(i)} \\
+        &=\frac{H(y)-H(y|z)}{H(y)} \\
+        &=1-\frac{H(y|z)}{H(y)}
+    \end{align}
 
         該項數據愈高，表示離散單元的分群愈是足以提供語音音位的資訊，是一個品質更好的分群結果。由於離散單元能多好的對應到音位才是人們所關心的問題，因此與純度不同，只以音位的角度出發，而不考慮以離散單元分群的角度。
+
+\input{3b}
+\input{3a1}
 
 \section{實驗集與分析模型}
 
 　　本研究的分析對象參考無文字架構 \cite{noauthor_textless_2021, lakhotia_generative_2021, lakhotia_generative_2021-1}  研究，採用當中提及的 CPC、Wav2vec 2.0 和 HuBERT 三個語音基石模型，並與作為比對的聲學特徵梅爾時頻譜（Mel-Spectrogram），一共四種語音表徵模型。
-$$
-\text{((寫一下 resolution 跟層數))}
-$$
+
+    \begin{align}
+        \text{((寫一下 resolution 跟層數))}
+    \end{align}
+
 此後亦跟隨該研究選用特定模型層數，和其釋出的K-平均量化模型。這些模型層數與量化為該研究中被證明與語音學特徵最相關，且被使用於無文字架構後續研究之語音離散表徵的抽取方法。無文字研究中已透過 (某某) 語料對四種語音表徵進行 K-平均分群演算法，分別得到群數為 50、100 和 200 的三個量化模型。
 
         本論文以公開的 LibriSpeech 資料集為分析對象，採取其 train-clean-100 為分析的語音語料庫。
@@ -123,59 +126,63 @@ $$
 \section{分析結果}
 
 %% (((還是放一下長條圖說個事兒好了)))     
-　　
+
+\input{3a2}
+
+        \begin{table}[!htbp]
+            \centering
+            \begin{subtable}[t]{\textwidth}
+                \centering
+                \begin{tabular}{cccccc}
+                                & 音位純度 & 分群純度 & 音位熵 & 離散單元熵 &    PNMI \\
+                    HuBERT      &   0.5256 &   0.3382 & 3.3152 &     3.8681 &　0.4993 \\   %% 1.6552 h
+                    wav2vec 2.0 &   0.4006 &   0.2676 & 3.3152 &     3.8215 &　0.3706 \\   %% 1.2286 w
+                    CPC         &   0.5188 &   0.3812 & 3.3146 &     3.7918 &　0.4992 \\   %% 1.6545 c
+                    LogMel      &   0.3253 &   0.1473 & 3.3158 &     3.8630 &　0.2647 \\   %% 0.8776 l
+                \end{tabular}
+                \caption{群數 = 50}
+                \label{tab:ch3-clu050}
+            \end{subtable}        
+
+            \vspace{0.5cm}        
+
+            \begin{subtable}[t]{\textwidth}
+                \centering
+                \begin{tabular}{cccccc}
+                                & 音位純度 & 分群純度 & 音位熵 & 離散單元熵 &    PNMI \\
+                    HuBERT      &   0.6097 &   0.2553 & 3.3152 &     4.5704 &　0.5786 \\   %% 1.9181 h
+                    wav2vec 2.0 &   0.4877 &   0.2118 & 3.3152 &     4.5284 &　0.4596 \\   %% 1.5235 w
+                    CPC         &   0.5895 &   0.2674 & 3.3146 &     4.5034 &　0.5557 \\   %% 1.8418 c
+                    LogMel      &   0.3348 &   0.0931 & 3.3158 &     4.5591 &　0.2789 \\   %% 0.9247 l
+                \end{tabular}
+                \caption{群數 = 100}
+                \label{tab:ch3-clu100}
+            \end{subtable}        
+
+            \vspace{0.5cm}        
+
+            \begin{subtable}[t]{\textwidth}
+                \centering
+                \begin{tabular}{cccccc}
+                                & 音位純度 & 分群純度 & 音位熵 & 離散單元熵 &    PNMI \\
+                    HuBERT      &   0.6474 &   0.1644 & 3.3152 &     5.2681 &　0.6289 \\   %% 2.0849 h
+                    wav2vec 2.0 &   0.5427 &   0.1467 & 3.3152 &     5.2173 &　0.5188 \\   %% 1.7199 w
+                    CPC         &   0.6098 &   0.1789 & 3.3146 &     5.1885 &　0.5882 \\   %% 1.9497 c
+                    LogMel      &   0.3474 &   0.0569 & 3.3158 &     5.2322 &　0.2955 \\   %% 0.9798 l
+                \end{tabular}
+                \caption{群數 = 200}
+                \label{tab:ch3-clu200}
+            \end{subtable}        
+
+            \caption{不同群數在四種基石模型的分析數據}
+            \label{tab:single-cluster-results}
+        \end{table}
+
 　　由表 \ref{tab:single-cluster-results} 中可以看出，分群的群數愈多時，音位的純度確實有所上升，但這可能是犧牲分群純度得來的。因此再看 PNMI 的指標可以發現，整體離散單元和音位標註的相關性還是有所提升的。
 
         此外，就不同模型來觀察，HuBERT 的表現是四種語音表徵之中最好的，一定程度上可以佐證 HuBERT 在找出語音中有意義單位上的效能，以及為什麼無文字架構通常以 HuBERT 當成抽取語音離散表徵的模型。
 
-\begin{table}[!htbp]
-    \centering
-    \begin{subtable}[t]{\textwidth}
-        \centering
-        \begin{tabular}{cccccc}
-                        & 音位純度 & 分群純度 & 音位熵 & 離散單元熵 &    PNMI \\
-            HuBERT      &   0.5256 &   0.3382 & 3.3152 &     3.8681 &　0.4993 \\   %% 1.6552 h
-            wav2vec 2.0 &   0.4006 &   0.2676 & 3.3152 &     3.8215 &　0.3706 \\   %% 1.2286 w
-            CPC         &   0.5188 &   0.3812 & 3.3146 &     3.7918 &　0.4992 \\   %% 1.6545 c
-            LogMel      &   0.3253 &   0.1473 & 3.3158 &     3.8630 &　0.2647 \\   %% 0.8776 l
-        \end{tabular}
-        \caption{群數 = 50}
-        \label{tab:ch3-clu050}
-    \end{subtable}
-
-    \vspace{0.5cm}
-
-    \begin{subtable}[t]{\textwidth}
-        \centering
-        \begin{tabular}{cccccc}
-                        & 音位純度 & 分群純度 & 音位熵 & 離散單元熵 &    PNMI \\
-            HuBERT      &   0.6097 &   0.2553 & 3.3152 &     4.5704 &　0.5786 \\   %% 1.9181 h
-            wav2vec 2.0 &   0.4877 &   0.2118 & 3.3152 &     4.5284 &　0.4596 \\   %% 1.5235 w
-            CPC         &   0.5895 &   0.2674 & 3.3146 &     4.5034 &　0.5557 \\   %% 1.8418 c
-            LogMel      &   0.3348 &   0.0931 & 3.3158 &     4.5591 &　0.2789 \\   %% 0.9247 l
-        \end{tabular}
-        \caption{群數 = 100}
-        \label{tab:ch3-clu100}
-    \end{subtable}
-
-    \vspace{0.5cm}
-
-    \begin{subtable}[t]{\textwidth}
-        \centering
-        \begin{tabular}{cccccc}
-                        & 音位純度 & 分群純度 & 音位熵 & 離散單元熵 &    PNMI \\
-            HuBERT      &   0.6474 &   0.1644 & 3.3152 &     5.2681 &　0.6289 \\   %% 2.0849 h
-            wav2vec 2.0 &   0.5427 &   0.1467 & 3.3152 &     5.2173 &　0.5188 \\   %% 1.7199 w
-            CPC         &   0.6098 &   0.1789 & 3.3146 &     5.1885 &　0.5882 \\   %% 1.9497 c
-            LogMel      &   0.3474 &   0.0569 & 3.3158 &     5.2322 &　0.2955 \\   %% 0.9798 l
-        \end{tabular}
-        \caption{群數 = 200}
-        \label{tab:ch3-clu200}
-    \end{subtable}
-
-    \caption{不同群數在四種基石模型的分析數據}
-    \label{tab:single-cluster-results}
-\end{table}
+\input{3a3}
 
 \section{本章總結}
 
