@@ -106,7 +106,50 @@
         該項數據愈高，表示離散單元的分群愈是足以提供語音音位的資訊，是一個品質更好的分群結果。由於離散單元能多好的對應到音位才是人們所關心的問題，因此與純度不同，只以音位的角度出發，而不考慮以離散單元分群的角度。
 
 \input{3b}
-\input{3a1}
+
+\section{語音學分類（Phone Type）}
+
+\subsection{簡介}
+
+　　除了單一音位本身的特性以外，由於音位本身彼此不是完全獨立的，而是彼此之間就存在相似的特徵，可以分成幾個組別。因此，依照 \mycite{tanghao等三篇} 的分組方式，對英語的音位進行分類並合併比對數據，看看這些離散單元本身是否有擷取到相似的發聲特徵，而不單純只是把音位分成約 50 類完全獨立的標籤。
+
+% （基於語音表徵本身就是 acoustic sisgnals 來的，應該 by nature 要可以對語音特徵分組吧？）
+
+        英語中的音位分為元音（Vowel）與輔音（Consonant）兩大類別，其中又可依照發音的共同特性一共分成七個類別。
+
+\paragraph{元音}
+
+% 母音在這邊為了簡單起見，會被分在一起？
+
+根據發音的位置是否發生改變，英語的元音可分為：
+
+\begin{itemize}
+    \item 單元音（Monophthong）
+    \item 雙元音（Diphthong）
+\end{itemize}
+
+兩大類別。
+
+\paragraph{輔音}
+
+而輔音按照發音的方式，可分為以下五類：
+
+\begin{itemize}
+    \item 爆破音 （Plosive）
+    \item 擦音（Fricative）
+    \item 塞擦音（Affircate）
+    \item 鼻音（Nasal）
+    \item 近音（Approximant）
+\end{itemize}
+
+\subsection{解釋意義}
+
+\begin{itemize}
+    \item 純度（Purity）：換成以語音學的類別作為新的語音標籤後，有何變化（關聯性更強？）
+    \item 熵（Entropy）（放直方圖解釋） \(\rightarrow\) 語音分類更明顯？
+    % \item 對齊（Alignment）：是否減少分段資訊的保留（連續子音母音被合併？）
+\end{itemize}
+
 
 \section{實驗集與分析模型}
 
@@ -139,7 +182,7 @@
 
 %% (((還是放一下長條圖說個事兒好了)))     
 
-\input{3a2}
+\subsection{基於各自音位的分析}
 
         \begin{table}[!htbp]
             \centering
@@ -194,7 +237,58 @@
 
         此外，就不同模型來觀察，HuBERT 的表現是四種語音表徵之中最好的，一定程度上可以佐證 HuBERT 在找出語音中有意義單位上的效能，以及為什麼無文字架構通常以 HuBERT 當成抽取語音離散表徵的模型。
 
-\input{3a3}
+\subsection{基於語音學分類的分析}
+
+        \begin{table}[!htbp]
+            \centering
+            \begin{subtable}[t]{\textwidth}
+                \centering
+                \begin{tabular}{cccccc}
+                                & 語音類別標籤純度 & 分群純度 & 語音類別標籤熵 & 離散單元熵 &     NMI \\
+                    HuBERT      &           0.7466 &   0.1422 &         1.7530 &     3.8681 &  0.5742 \\   %% h  1.0065
+                    wav2vec 2.0 &           0.6913 &   0.1570 &         1.7530 &     3.8215 &  0.4682 \\   %% w  0.8208
+                    CPC         &           0.7418 &   0.1953 &         1.7530 &     3.7918 &  0.5644 \\   %% c  0.9894
+                    LogMel      &           0.5980 &   0.0953 &         1.7530 &     3.8630 &  0.3403 \\   %% l  0.5966
+                \end{tabular}
+                \caption{群數 = 50}
+                \label{tab:ch3-clu050}
+            \end{subtable}        
+
+            \vspace{0.5cm}        
+
+            \begin{subtable}[t]{\textwidth}
+                \centering
+                \begin{tabular}{cccccc}
+                                & 語音類別標籤純度 & 分群純度 & 語音類別標籤熵 & 離散單元熵 &     NMI \\
+                    HuBERT      &           0.7804 &   0.0856 &         1.7530 &     4.5704 &  0.6148 \\   %% h  1.0778
+                    wav2vec 2.0 &           0.7219 &   0.0889 &         1.7530 &     4.5284 &  0.5252 \\   %% w  0.9207
+                    CPC         &           0.7790 &   0.0997 &         1.7530 &     4.5034 &  0.6046 \\   %% c  1.0599
+                    LogMel      &           0.6032 &   0.0567 &         1.7530 &     4.5591 &  0.3512 \\   %% l  0.6157
+                \end{tabular}
+                \caption{群數 = 100}
+                \label{tab:ch3-clu100}
+            \end{subtable}        
+
+            \vspace{0.5cm}        
+
+            \begin{subtable}[t]{\textwidth}
+                \centering
+                \begin{tabular}{cccccc}
+                                & 語音類別標籤純度 & 分群純度 & 語音類別標籤熵 & 離散單元熵 &     NMI \\
+                    HuBERT      &           0.8004 &   0.0464 &         1.7530 &     5.2681 &  0.6563 \\   %% h  1.1504
+                    wav2vec 2.0 &           0.7490 &   0.0527 &         1.7530 &     5.2173 &  0.5671 \\   %% w  0.9941
+                    CPC         &           0.7947 &   0.0644 &         1.7530 &     5.1885 &  0.6345 \\   %% c  1.1123
+                    LogMel      &           0.6107 &   0.0335 &         1.7530 &     5.2322 &  0.3652 \\   %% l  0.6401
+                \end{tabular}
+                \caption{群數 = 200}
+                \label{tab:ch3-clu200}
+            \end{subtable}        
+
+            \caption{不同群數在四種基石模型按照語音學類別的分析數據}
+            \label{tab:single-cluster-phonetype-results}
+        \end{table}
+        　　根據表 \ref{tab:single-cluster-results} 中，在語音類別標籤的趨勢同樣在語音學類別中也能看得出來。然而，由於標籤數量較語音類別標籤少很多，因此語音標籤的純度相較音位會較高。
+
 
 \section{本章總結}
 
