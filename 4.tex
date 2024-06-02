@@ -2,7 +2,17 @@
 % 兩張表，含 rate 數據
 
 
-\chapter{下一章節}
+% \chapter{下一章節}
+
+\chapter{多個語音離散表徵組合與語音標記間的關係}
+%%% ## phoneme 就是一種文字 ## %%%
+\section{動機}
+
+基於單一語音單元表徵的限制，我們
+
+放一些 rate 的東西
+
+%%%%%%%%%%%%%
 　　
 又由於 unit 的 time resolution 本身其實還是
 低於人類理解的最小單位 --- phoneme，
@@ -13,15 +23,7 @@
 unit sequence 本身有許多和 phoneme、字母等相似的 pattern 出現。
 
 
-
-\chapter{多個語音離散表徵組合與語音標記間的關係}
-
-\section{動機}
-
-基於單一語音單元表徵的限制，我們
-
-放一些 rate 的東西
-
+%%%%%%%%%%%%%
 
 在现有的语音表征方法中，单一的离散单元虽然在许多任务中表现良好，但在处理长序列和时间分辨率方面存在局限性。Ren 等人的研究表明，许多相似的模式是以连续几个单元的形式出现的，这提示我们可以通过组合多个离散单元来更好地表示语音信号，从而提高模型在语音识别和语音翻译等任务中的性能 (\href{https://www.isca-archive.org/interspeech_2022/ren22_interspeech.html}{ISCA Archive}) (\href{https://deepai.org/publication/speech-pre-training-with-acoustic-piece}{DeepAI})。此外，SpeechTokenizer 的研究进一步展示了通过分层建模不同信息层次，能够在语音表示中捕捉到更丰富的语义和语音学信息 (\href{https://ar5iv.org/pdf/2308.16692}{ar5iv})。 
 
