@@ -87,8 +87,8 @@ HuBERT \cite{hsu_hubert_2021-2} 提出的標準進行初步的分析。
 
 其中 $i$ 是第 $i$ 個音位類別，而 $j$ 指編號為$j$的離散單元。兩個變數的邊際機率（Marginal Probability）分別為
     \begin{align}
-        p_z(j)=\sum_i{p_{yz}(i, j)}
-    p_y(i)=\sum_j{p_{yz}(i, j)}
+    p_z(j) &=\sum_i{p_{yz}(i, j)} \\
+    p_y(i) &=\sum_j{p_{yz}(i, j)} \\
 \end{align}
 
 因此，對於每一個音位 $i$ 而言，這個音位對應最可能的離散單元為
@@ -100,7 +100,8 @@ HuBERT \cite{hsu_hubert_2021-2} 提出的標準進行初步的分析。
       y^\ast(j) = \arg\max_i p_{yz}(i,j)
     \end{align}
 
-於是我們可以計算出以下指標：
+% 於是我們可以計算出以下指標：
+透過這些定義，以下分節介紹將要分析的指標：
 
 \subsection{純度}
 
@@ -205,7 +206,7 @@ HuBERT \cite{hsu_hubert_2021-2} 提出的標準進行初步的分析。
 \section{實驗集與分析模型}
 
 
-
+%%%%%%%%%%%%%%%%
 本研究的分析對象參考無文字架構 \cite{noauthor_textless_2021, lakhotia_generative_2021, lakhotia_generative_2021-1} 的研究，採用當中提及的 CPC、Wav2vec 2.0 和 HuBERT 三個語音基石模型，並與作為比對的聲學特徵梅爾時頻譜（Mel-Spectrogram），共四種語音表徵模型。模型的詳細資訊如表 \ref{tab:model-info} 所示：
 
 \begin{table}
@@ -229,10 +230,28 @@ HuBERT \cite{hsu_hubert_2021-2} 提出的標準進行初步的分析。
     \item **HuBERT**：與 CPC 和 wav2vec 2.0 使用對比損失不同，HuBERT 使用類似於 BERT（Devlin 等人，2019）的掩碼預測任務進行訓練，但輸入是掩碼連續音頻信號。目標是通過對原始語音特徵或早期迭代的學習特徵進行無監督聚類獲得的，這一方法受 DeepCluster（Caron 等人，2018）的啟發。我們使用了 Hsu 等人（2021）訓練的 BASE 12 層變壓器模型，該模型在960小時的 LibriSpeech 上進行了兩次迭代訓練。此模型在每層將原始音頻編碼為768維的向量幀（每20毫秒一個），我們從第6層提取這些向量，如原始論文所述。
     \item **LogMel**：作為基準，我們考慮使用80個頻帶的對數梅爾濾波銀行編碼器。
 \end{itemize}
+%================
 
 
 %%%%%%%%%%%%%%%%
-　　本研究的分析對象參考無文字架構 \cite{noauthor_textless_2021, lakhotia_generative_2021, lakhotia_generative_2021-1} 的研究，採用當中提及的 CPC、Wav2vec 2.0 和 HuBERT 三個語音基石模型，並與作為比對的聲學特徵梅爾時頻譜（Mel-Spectrogram），共四種語音表徵模型。模型的詳細資訊如 \ref{tab:model-info} 所示：
+　　本研究的分析對象參考無文字架構 \cite{noauthor_textless_2021, lakhotia_generative_2021, lakhotia_generative_2021-1} 的研究，
+% 採用當中提及的 CPC、Wav2vec 2.0 和 HuBERT 三個語音基石模型，並與作為比對的聲學特徵梅爾時頻譜（Mel-Spectrogram），共四種語音表徵模型。
+% 模型的
+% 資訊簡述如下：
+採用當中提及的
+
+\begin{itemize}
+    \item CPC：由卷積式類神經網路的編碼器和遞迴式類神經網路的預測器組成，以對比式學習使用訓練
+    \item Wav2vec 2.0：由
+    
+    CPC 由編碼器和預測器兩部分組成。編碼器從語音輸入生成嵌入 z。預測器基於過去預測編碼器的未來狀態，系統通過對比損失進行訓練。我們使用 Rivière 和 Dupoux（2020）訓練的 CPC 模型，該模型使用 LibriLight 數據集的6k小時“乾淨”子樣本進行訓練。我們從預測器的中間層提取表示，生成256維的嵌入（每10毫秒一個），如原始論文所述。
+    \item Wav2vec 2.0：此模型使用編碼器和預測器，並通過對比性地區分編碼器輸出中的正樣本和負樣本進行訓練。我們使用 Baevski 等人（2020b）訓練的預訓練 Wav2vec 2.0 LARGE 變體，該模型在 LibriLight 數據集的60k小時上進行訓練。此模型將原始音頻編碼為1024維的向量幀（每20毫秒一個）。為了選擇最佳層，我們從模型的每一層提取10小時的 LibriLight 子集的凍結表示，並使用 CTC 損失訓練線性分類器來預測文本標籤的音素版本。第14層在 LS dev-other 上獲得了最低的 PER（Baevski 等人，2021年使用類似的方法選擇了第15層）。
+    \item HuBERT：與 CPC 和 Wav2vec 2.0 使用對比損失不同，HuBERT 使用類似於 BERT（Devlin 等人，2019）的掩碼預測任務進行訓練，但輸入是掩碼連續音頻信號。目標是通過對原始語音特徵或早期迭代的學習特徵進行無監督聚類獲得的，這一方法受 DeepCluster（Caron 等人，2018）的啟發。我們使用了 Hsu 等人（2021）訓練的 BASE 12 層變壓器模型，該模型在960小時的 LibriSpeech 上進行了兩次迭代訓練。此模型在每層將原始音頻編碼為768維的向量幀（每20毫秒一個），我們從第6層提取這些向量，如原始論文所述。
+    \item LogMel：作為基準，我們考慮使用80個頻帶的對數梅爾濾波銀行編碼器。
+\end{itemize}
+
+
+\ref{tab:model-info} 所示：
 
 \begin{table}
     \centering
@@ -257,6 +276,7 @@ HuBERT \cite{hsu_hubert_2021-2} 提出的標準進行初步的分析。
 將語音語料庫的語音資料經過四個模型獲取連續表徵後，再經過量化模型得到完全由離散單元組成的「偽文字」語料。
 
         針對語音學的音位標註，透過強迫對齊器（Forced-aligner）\footnote{https://github.com/MontrealCorpusTools/Montreal­Forced­Aligner}的英語預訓練模型，從語料庫的文字轉寫取得語音資料的音位標註與對應的時間範圍。最後透過語音表徵各自的時間解析度生成以音框為單位的音位標註語料。最後將兩者對語音資料集進行音位標註相關性的分析。
+%================
 
 \section{分析結果}
 
