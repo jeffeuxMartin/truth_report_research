@@ -1,0 +1,144 @@
+% 分詞
+% 兩張表，含 rate 數據
+
+
+% \chapter{下一章節}
+
+\chapter{多個語音離散表徵組合與語音標記間的關係}
+%%% ## phoneme 就是一種文字 ## %%%
+\section{動機}
+
+基於單一語音單元表徵的限制，我們
+
+放一些 rate 的東西
+
+%%%%%%%%%%%%%
+　　
+又由於 unit 的 time resolution 本身其實還是
+低於人類理解的最小單位 --- phoneme，
+因此 deduplication 成為常規操作。
+然而如
+\mycite{acoustic-piece 那篇} 所提及，
+其實我們可以發現
+unit sequence 本身有許多和 phoneme、字母等相似的 pattern 出現。
+
+
+%%%%%%%%%%%%%
+
+在现有的语音表征方法中，单一的离散单元虽然在许多任务中表现良好，但在处理长序列和时间分辨率方面存在局限性。Ren 等人的研究表明，许多相似的模式是以连续几个单元的形式出现的，这提示我们可以通过组合多个离散单元来更好地表示语音信号，从而提高模型在语音识别和语音翻译等任务中的性能 (\href{https://www.isca-archive.org/interspeech_2022/ren22_interspeech.html}{ISCA Archive}) (\href{https://deepai.org/publication/speech-pre-training-with-acoustic-piece}{DeepAI})。此外，SpeechTokenizer 的研究进一步展示了通过分层建模不同信息层次，能够在语音表示中捕捉到更丰富的语义和语音学信息 (\href{https://ar5iv.org/pdf/2308.16692}{ar5iv})。 
+
+
+\section{相關研究}
+
+\subsection{對語音離散表徵的分詞（tokenization）研究}
+
+Ren 等人提出了使用声学片段（acoustic pieces）作为预训练的目标标签，通过对 HuBERT 代码进行句子片段化处理得到，能够显著改善自动语音识别（ASR）的性能 (\href{https://www.isca-archive.org/interspeech_2022/ren22_interspeech.html}{ISCA Archive})。Wu 等人介绍了 Wav2Seq，这是一种自监督方法，通过伪语言（pseudo languages）预训练编码器和解码器，显著提升了 ASR 和语音到文本翻译的性能 (\href{https://deepai.org/publication/speech-pre-training-with-acoustic-piece}{DeepAI})。
+
+BEATs 提出了音频预训练方法，通过声学分片（acoustic tokenizers）学习音频离散表示，用于各种音频分类任务，表现出色 (\href{https://ar5iv.org/abs/2212.09058}{ar5iv})。
+
+SpeechTokenizer 利用层级建模和语义蒸馏技术，通过多层残差量化器（RVQ）捕捉不同层次的信息，从而在语音表示中实现更高的语义和语音学特征保真度 (\href{https://ar5iv.org/pdf/2308.16692}{ar5iv})。
+
+
+
+
+
+\section{分詞方法}
+
+
+在文字語言模型上常用的分詞方法是 BPE，這種分詞方法比較於原本的 word 有幾個好處：
+
+1 可以
+
+
+ 在文本处理中，常用的分词方法是 Byte Pair Encoding (BPE)。这种方法可以减少词汇表大小，提高模型的泛化能力，并能更好地处理罕见词和新词 (\href{https://deepai.org/publication/speech-pre-training-with-acoustic-piece}{DeepAI})。在语音处理中，类似的方法也可以用于离散语音单元的分词处理。例如，Ren 等人的方法通过句子片段化处理将高频代码模式合并为声学片段，从而有效地将输入音频与自然语言桥接起来 (\href{https://www.isca-archive.org/interspeech_2022/ren22_interspeech.html}{ISCA Archive}) (\href{https://deepai.org/publication/speech-pre-training-with-acoustic-piece}{DeepAI})。 
+
+
+
+
+在文字语言模型上常用的分词方法是 Byte Pair Encoding (BPE)。这种分词方法相较于原本的单词表征有几个好处：
+
+\begin{enumerate}
+    \item \textbf{减少词汇表的大小}：提高模型的泛化能力。
+    \item \textbf{处理罕见词和新词}：通过子词单元可以更好地处理罕见词和新词。
+    \item \textbf{减少数据冗余}：提升训练和推理的效率。
+\end{enumerate}
+在语音处理中，类似的方法可以用于离散语音单元的分词处理。例如，Ren 等人的方法通过句子片段化处理（sentence piece）将高频代码模式合并为一个声学片段，从而有效地将输入音频与自然语言桥接起来 (\href{https://paperswithcode.com/paper/speech-pre-training-with-acoustic-piece}{Papers with Code})。
+
+ 
+
+
+%%%%%%%%%%%%%%%%%%%
+ 
+
+\section{衡量方式}
+
+\subsection{字符（token）與音位之間的關係}
+
+
+
+
+为了衡量离散单元和音位之间的关系，我们可以使用以下几个指标：
+
+\begin{enumerate}
+    \item \textbf{音位长条图（Phoneme Bar Chart）}：对单元进行频率统计，以了解每个单元在不同音位上的分布情况。
+    \item \textbf{纯度（Purity）}：计算每个 cluster 单元内的音位纯度，以衡量单元对特定音位的代表性。 
+
+% \textbackslash{}Epz(j)[py∣z(y∗(j)∣j)]\textbackslash{}E\_{p\_z(j)\}\left[p\_{y|z\}(y\^*(j)|j) \textbackslash{}right]\textbackslash{}Epz(j)[py∣z(y∗(j)∣j)] 
+
+以及每个音位对 cluster 的纯度，衡量音位在 cluster 中的一致性。
+% \textbackslash{}Epy(i)[pz∣y(z∗(i)∣i)]\textbackslash{}E\_{p\_y(i)\}\left[p\_{z|y\}(z\^*(i)|i) \textbackslash{}right]\textbackslash{}Epy(i)[pz∣y(z∗(i)∣i)]
+
+    \item \textbf{熵（Entropy）和相互信息（Mutual Information, MI）}：从信息论角度探讨单元提供了多少背后音位的信息。 
+
+% I(y;z)H(y)=∑i∑jpyz(i,j)log⁡pyz(i,j)py(i)pz(j)∑ipy(i)log⁡py(i)\textbackslash{}frac\{I(y;z)\}{H(y)\}=\textbackslash{}cfrac\{\sum\_i \textbackslash{}sum\_j p\_{yz\}(i, j) \textbackslash{}log \textbackslash{}cfrac\{p\_{yz\}(i, j)\}{p\_y(i)p\_z(j)\}}\{\sum\_i p\_y(i) \textbackslash{}log p\_y(i)\}H(y)I(y;z)=∑ipy(i)logpy(i)∑i∑jpyz(i,j)logpy(i)pz(j)pyz(i,j) \textbackslash{}begin\{align\} \textbackslash{}frac\{I(y;z)\}{H(y)\}&=\textbackslash{}cfrac\{\sum\_i \textbackslash{}sum\_j p\_{yz\}(i, j) \textbackslash{}log \textbackslash{}cfrac\{p\_{yz\}(i, j)\}{p\_y(i)p\_z(j)\}}\{\sum\_i p\_y(i) \textbackslash{}log p\_y(i)\} \textbackslash{} \&=\textbackslash{}frac\{H(y)-H(y|z)\}{H(y)\} \textbackslash{} \&=1-\textbackslash{}frac\{H(y|z)\}{H(y)\} \textbackslash{}end\{align\}
+\end{enumerate}
+
+\subsection{壓縮比率}
+
+
+
+% \subparagraph{字符（token）与音位之间的关系}
+
+为了衡量离散单元和音位之间的关系，我们可以使用以下几个指标：
+
+\begin{enumerate}
+    \item \textbf{音位长条图（Phoneme Bar Chart）}：对单元进行频率统计，以了解每个单元在不同音位上的分布情况。
+    \item \textbf{纯度（Purity）}：计算每个 cluster 单元内的音位纯度，以衡量单元对特定音位的代表性。
+    \item \textbf{熵（Entropy）和相互信息（Mutual Information, MI）}：从信息论角度探讨单元提供了多少背后音位的信息。
+\end{enumerate}
+
+% \subparagraph{压缩比率}
+
+通过对离散单元进行分词和压缩，可以显著减少序列长度，从而提高训练和推理的效率。我们可以通过计算压缩比率来衡量这种方法的有效性。
+
+ 
+
+
+\section{分析結果}
+
+
+\subsection{基於各自音位的分析}
+
+在此部分，我们将展示基于音位的频率统计结果和纯度分析结果。通过这些分析，我们可以了解离散单元在捕捉音位特征方面的表现 (\href{https://www.isca-archive.org/interspeech_2022/ren22_interspeech.html}{ISCA Archive}) (\href{https://deepai.org/publication/speech-pre-training-with-acoustic-piece}{DeepAI})。
+
+\subsection{基於語音學分類的分析}
+
+
+在此部分，我们将展示基于语音学分类的分析结果。这包括对离散单元在不同语音学类别（如元音、辅音）中的表现分析，以评估其在不同语音特征下的表现 (\href{https://www.isca-archive.org/interspeech_2022/ren22_interspeech.html}{ISCA Archive}) (\href{https://deepai.org/publication/speech-pre-training-with-acoustic-piece}{DeepAI})。
+
+
+
+ 
+% \section{應用在語音任務的實驗}
+
+% \subsection{語音辨識}
+
+% \subsubsection{實驗設定與資料集}
+
+% \subsubsection{實驗結果與其和分析數據間的關係}
+
+
+
+\section{本章總結}
+
+总结本章的内容，回顾离散单元在多个语音表征组合中的应用和优势，并展望未来的研究方向。
