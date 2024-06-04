@@ -1,0 +1,46 @@
+% 20B-21A
+% 21B-22A
+% 22B-23A
+% 23B-24A
+
+\section{相關研究 (NOT YET)}  
+\subsection{(Version MINE)}
+　　
+這類研究大約在無文字架構被提出後的約兩年內逐步出現，但各篇研究對於「應用次詞（Subword）概念於離散單元」的切入點都有所差異。
+
+首先\cite{ren_speech_2022}\citetag{22A4-Pretrain-ap}基於離散單元與音位的關聯性，並透過觀察到離散單元序列中，對應轉寫文字的單詞，兩者互相比對可以觀察到不少相似的模式（Pattern），甚至在不同語者之間也能觀察到此一現象。以此本篇論文首先將離散單元使用 SentencePiece 分詞演算法後的新單元「聲學片段（Acoustic Piece）」用於語音辨識的訓練上。
+
+近乎同時，\cite{wu_wav2seq_2023}\citetag{22A5-wav2seq}基於長度考量，以及離散單元和音位的關聯性，首先將離散單元視為字符（Character），嘗試將這些字符透過分詞方法組成「偽語言（Pseudo-language\footnote{對應於離散單元被視為「偽文字（Pseudo-text）」}）」，來幫助語音到文字的模型。因為解碼器在實際應用時需要生成的序列多是文字的符記 --- 次詞單位，因此該篇研究旨在讓模型在預訓練時可以更適應下游任務。
+
+\uucite{23A-coarser-grain} 
+
+近期，\cite{chang_exploring_2024}\citetag{23B-shinji-hsiuhsuan}將次詞單位分詞的作法納入 ESPNet 套件在處理離散單元相關語音任務的固定流程（Pipeline）之中，並獲得了超越以往的表現，進一步證明了這個方法的效果。
+% speech generation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\myhline
+
+
+
+
+% \textbf{\#\# 對語音離散表徵的分詞研究}
+
+\subsection{(Version ChatGPT)}
+
+% \section{分詞方法在語音處理中的應用}
+
+在語音處理領域，這些分詞方法同樣適用。通過對離散語音單元的分詞處理，可以有效地將語音信號轉換為子詞單元，提高語音識別和翻譯模型的性能。例如，Ren 等人的方法通過句子片段化處理將高頻代碼模式合併為聲學片段，從而有效地將輸入音頻與自然語言橋接起來 \cite{ren_speech_2022}。

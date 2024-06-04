@@ -1,0 +1,139 @@
+\section{分詞方法 \textcolor{red}{(NOT YET)}}  % 記得 cite BPE
+
+\subsection{(Version 1)}
+
+為了將多個離散單元之間按照可能出現的連續模式進行分組，我們參照文字處理一包會使用的會員組隊編碼的演算法，對離散單元的序列進行分析。以下簡單介紹委員組隊編碼的演算法機制：
+
+
+%%%%%%%%%
+
+
+
+\myhline
+\subsection{(Version 2)}
+
+
+在文字語言模型上常用的分詞方法是 BPE，這種分詞方法比較於原本的 word 有幾個好處：
+
+1 可以
+
+
+ 在文本处理中，常用的分词方法是 Byte Pair Encoding (BPE)。这种方法可以减少词汇表大小，提高模型的泛化能力，并能更好地处理罕见词和新词 (\href{https://deepai.org/publication/speech-pre-training-with-acoustic-piece}{DeepAI})。在语音处理中，类似的方法也可以用于离散语音单元的分词处理。例如，Ren 等人的方法通过句子片段化处理将高频代码模式合并为声学片段，从而有效地将输入音频与自然语言桥接起来 (\href{https://www.isca-archive.org/interspeech_2022/ren22_interspeech.html}{ISCA Archive}) (\href{https://deepai.org/publication/speech-pre-training-with-acoustic-piece}{DeepAI})。 
+
+
+
+
+在文字语言模型上常用的分词方法是 Byte Pair Encoding (BPE)。这种分词方法相较于原本的单词表征有几个好处：
+
+\begin{enumerate}
+    \item \textbf{减少词汇表的大小}：提高模型的泛化能力。
+    \item \textbf{处理罕见词和新词}：通过子词单元可以更好地处理罕见词和新词。
+    \item \textbf{减少数据冗余}：提升训练和推理的效率。
+\end{enumerate}
+在语音处理中，类似的方法可以用于离散语音单元的分词处理。例如，Ren 等人的方法通过句子片段化处理（sentence piece）将高频代码模式合并为一个声学片段，从而有效地将输入音频与自然语言桥接起来 (\href{https://paperswithcode.com/paper/speech-pre-training-with-acoustic-piece}{Papers with Code})。
+
+ %%% 
+
+\myhline
+\subsection{(Version 3)}
+
+在自然語言處理（NLP）和語音處理（Speech Processing）中，分詞方法是將連續的文本或語音信號分割成更小的單位（如詞、子詞或音素）的技術。這些單位可以用來構建詞彙表並用於模型的訓練和推理。以下是幾種常見的分詞方法：
+
+\subsubsection{Byte Pair Encoding (BPE)}
+
+Byte Pair Encoding (BPE) 是一種常用的分詞方法，最初用於壓縮算法，後來被引入到自然語言處理領域。BPE 的基本思想是通過反覆合併頻繁出現的字節對來構建子詞單元。其主要優點包括：
+
+1. **減少詞彙表的大小**：BPE 通過將常見的子詞單元加入詞彙表，顯著減少了詞彙表的大小，提高了模型的泛化能力。
+2. **處理罕見詞和新詞**：通過使用子詞單元，BPE 能夠更好地處理罕見詞和新詞，因為這些詞可以拆分為已存在的子詞單元。
+3. **減少數據冗餘**：BPE 在減少數據冗餘方面表現出色，提升了訓練和推理的效率。
+
+具體步驟如下：
+- 初始化：將每個單詞拆分成字母，並將每個字母視為單獨的符號。
+- 合併：重複合併頻率最高的符號對，直到達到預定的詞彙表大小。
+
+\subsubsection{SentencePiece}
+
+SentencePiece 是一種無語言依賴的分詞方法，特別適合處理無空格分隔的語言（如中文、日文等）。它通過統一的方式處理所有輸入文本，不需要任何先驗的分詞標記。其優點包括：
+
+1. **語言無依賴性**：適用於各種語言，包括沒有空格分隔的語言。
+2. **靈活性**：支持多種分詞模型，如 BPE 和 unigram language model。
+3. **簡化預處理**：避免了繁瑣的預處理步驟，使分詞過程更簡單。
+
+\subsubsection{WordPiece}
+
+WordPiece 最初由 Google 為機器翻譯系統開發，並在 BERT 等模型中得到了廣泛應用。與 BPE 類似，WordPiece 也通過合併子詞單元來構建詞彙表，但它使用的是基於概率的合併策略。其主要特點包括：
+
+1. **提高模型的泛化能力**：通過引入概率模型，WordPiece 能夠更精確地確定子詞單元的合併順序，提高了模型的泛化能力。
+2. **靈活性**：能夠處理各種語言和應用場景，適應性強。
+
+\subsubsection{Unigram Language Model}
+
+Unigram Language Model 是基於語言模型的分詞方法，使用概率分佈來選擇子詞單元。其基本思想是通過最大化輸入文本的概率來選擇最優的子詞分割方式。其特點包括：
+
+1. **統計建模**：基於統計語言模型，能夠更好地適應語言特性。
+2. **靈活性**：適用於多種語言和應用場景。
+
+
+\myhline
+\subsection{(Version 4)}
+
+\textbf{Byte Pair Encoding (BPE) 演算法解析}
+
+\subsubsection{簡介}
+Byte Pair Encoding（BPE）是一種常用的子詞（subword）分割演算法，主要應用於自然語言處理（NLP）中，以提高語言模型的效率和性能。BPE通過將頻繁出現的字節對（或字元對）合併，逐步構建出一組子詞單位。這種方法特別適合處理語料庫中的罕見詞彙和未見詞（out-of-vocabulary words）。
+
+\subsubsection{演算法原理}
+BPE 的基本思想源自數據壓縮技術。其核心步驟如下：
+
+1. **初始化詞彙表**：將所有單詞拆分為最小單位（通常是字符或字節）。例如，單詞 "hello" 會被初始化為 [h, e, l, l, o]。
+
+2. **計算字對頻率**：統計相鄰字對的出現頻率。例如，在 "hello" 中，相鄰字對有 ("h", "e"), ("e", "l"), ("l", "l") 和 ("l", "o")。
+
+3. **合併最頻繁的字對**：找到出現頻率最高的字對並將其合併成一個新的符號。例如，假設 ("l", "l") 是最頻繁的字對，則將 "hello" 變為 [h, e, ll, o]。
+
+4. **更新詞彙表**：根據合併結果更新詞彙表和文本表示。
+
+5. **重複步驟 2-4**：繼續找到頻率最高的字對並合併，直到達到預定的合併次數或詞彙表達到期望大小。
+
+\subsubsection{例子}
+假設有以下三個單詞："low", "lowest", "newest"。初始狀態為：
+
+```
+low: [l, o, w]
+lowest: [l, o, w, e, s, t]
+newest: [n, e, w, e, s, t]
+```
+
+1. **計算字對頻率**：
+   - "low" 中的字對有 (l, o), (o, w)
+   - "lowest" 中的字對有 (l, o), (o, w), (w, e), (e, s), (s, t)
+   - "newest" 中的字對有 (n, e), (e, w), (w, e), (e, s), (s, t)
+
+   頻率最高的字對是 (e, s)。
+
+2. **合併 (e, s)**：
+   ```
+   low: [l, o, w]
+   lowest: [l, o, w, es, t]
+   newest: [n, e, w, es, t]
+   ```
+
+3. **更新後繼續合併**：
+   下一個最頻繁的字對是 (w, e)，繼續合併。
+
+   ```
+   low: [l, o, w]
+   lowest: [l, o, w, es, t]
+   newest: [n, ew, es, t]
+   ```
+
+4. 重複這一過程，直到達到預定的次數或目標。
+
+\subsubsection{優點與應用}
+BPE 在NLP領域有諸多優點：
+- **處理未見詞**：BPE 能夠有效處理罕見詞和未見詞，避免模型因為這些詞而性能下降。
+- **降低詞彙表大小**：通過合併頻繁字對，BPE 能顯著減少詞彙表大小，從而提升訓練效率。
+- **提升模型性能**：子詞表示能夠更好地捕捉詞彙間的結構和語義關係，提升模型的表現能力。
+
+\subsubsection{結論}
+Byte Pair Encoding（BPE）是一種強大的子詞分割演算法，通過逐步合併頻繁出現的字對，構建高效的詞彙表示，廣泛應用於現代自然語言處理模型中。其簡單且高效的特性，使其成為處理大量文本數據的理想選擇。
