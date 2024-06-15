@@ -1,0 +1,123 @@
+\chapter{多個語音離散表徵與音位的關係}
+\newcommand{\myhline}{\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}}
+
+\newcommand{\draftbegin}{\centerline{\textcolor{magenta}{\textbf{=======================以下是草稿！=======================}}}}
+\newcommand{\drafttermi}{\centerline{\textcolor{blue}{\textbf{=======================以上是草稿！=======================}}}}
+
+
+
+\section{動機}
+　　
+% 如前一章所述，由於單一離散單元所代表的僅為 10 或 20 毫秒的語音訊號，而作為一種類似文字的語音內容表示，每一個音位往往都對應超過一個以上的離散單元。因此，基於使得離散單元序列可以不論在長度和對應的語音訊號兩方面都能更接近於文字，因此從自然語言處理的分詞演算法（Tokenization）得到靈感，本章節將嘗試將這些演算法應用於離散單元的序列之上，並應用上一章節的分析方式，比對將多個離散單元重新分組形成符記之後，是否可以在保有「完全從語音訊號獲得」的同時，得到更接近於音位的序列。
+如前一章所述，一個文字或音位往往對應到上百毫秒的語音訊號，然而單一離散單元所對應的聲音訊號為 10 或 20 毫秒，亦即同一段語音所對應的離散單元數目將比音位或文字多出許多。本章節從自然語言處理中獲取靈感，將分詞演算法（Tokenization）應用於離散單元序列上，並應用上一章節的分析方法檢驗將多個離散單元所組成之符記。探討分詞後，離散單元是否可以同時擁有無文字（Textless）\cite{lakhotia_generative_2021, lakhotia_generative_2021-1, noauthor_textless_2021} 的特性，且更接近音位的序列，成為更好的語音表徵。
+% 　　
+% (1) 20B-21A (2) 21B-22A (3) 22B-23A (4) 23B-24A
+
+\section{相關研究} 
+　　
+在無文字架構被提出後的約兩年後，藉分詞方法組合離散單元的研究逐步出現。
+最初提出「聲學片段（Acoustic Piece）」的是任氏（Ren）等人 \cite{ren_speech_2022}\citetag{1-22A4-Pretrain-ap}），該論文
+% 基於離散單元與音位的關聯性，並透過
+% 觀察
+% 從
+比對
+離散單元序列
+及對應的文字轉寫，
+% 之間的，
+% 中，對應轉寫文字的單詞，兩者互相比對可以
+從中
+觀察
+到許多相似的模式（Pattern），
+而且不限於單一語者
+。
+% ，甚至在不同語者之間也能觀察到此一現象。
+% 以此
+受此啟發，
+本論文
+首先將離散單元使用句子片段（SentencePiece） \cite{kudo_sentencepiece_2018} 分詞，獲得新的符記 --- 「聲學片段（Acoustic Piece）」，並用於語音辨識的預訓練上。
+
+不久，由吳氏（Wu）提出的 Wav2seq \cite{wu_wav2seq_2023}\citetag{2-22A5-wav2seq}論文中，考量文字與語音的序列長度差異，並基於離散單元和音位的關聯性，將離散單元視為字符（Character），嘗試將這些字符透過分詞方法組成「偽語言（Pseudo-language\footnote{偽語言對應之離散單元被視為「偽文字（Pseudo-text）」}）」，來幫助語音到文字的模型。因為解碼器在實際應用時需要生成的序列多是文字的符記 --- 次詞單位（Subword Unit），因此該篇研究旨在讓模型在預訓練
+% 時可以更適應下游任務。
+後可以快速適應下游任務。
+與前一篇呼應，「聲學片段」對語音預訓練的效果在
+\cite{10096788}\citetag{3-23A-coarser-grain}
+中被探討，
+此後聲學片段更被應用於
+縮短資料序列長度\cite{chang_exploration_2023}\citetag{4-23B-Exploration of Efficient End-to-End ASR using Discretized Input from Self-Supervised Learning} 
+、
+語音生成
+\cite{shen2024acoustic}\citetag{5-24A-speech-gen}，
+或
+% 透過離散單元與可以分離語者資訊的能力學習表徵
+學習更穩健（Robust）的語音表徵
+\cite{chang2023r}\citetag{6-23B-rspin-acousticpiece}。
+
+% \cite{yang2024towards}\citetag{23B-toward-universal-speech-distok-asrtts}
+% \cite{ma23b_interspeech}\citetag{23A-pusinglimit}
+
+近期，張氏（Chang）等人\cite{chang_exploring_2024}\citetag{7-23B-shinji-hsiuhsuan}將以分詞方法處理離散單元的流程（Pipeline）納入 ESPNet 套件 \cite{watanabe2018espnet} 中，並在語音辨識、語音翻譯等任務中獲得了超越以往的表現，進一步證明了這個方法的效果。
+
+% \textbf{\#\# 對語音離散表徵的分詞研究}
+% \subsection{(Version ChatGPT)}
+% \section{分詞方法在語音處理中的應用}
+% 在語音處理領域，這些分詞方法同樣適用。通過對離散語音單元的分詞處理，可以有效地將語音信號轉換為子詞單元，提高語音識別和翻譯模型的性能。例如，Ren 等人的方法通過句子片段化處理將高頻代碼模式合併為聲學片段，從而有效地將輸入音頻與自然語言橋接起來 \cite{ren_speech_2022}。
+
+
+\section{分詞方法}
+
+　　
+在以文字為主體的自然語言處理中，文字文本除了以單詞（Word）或字元（Character）為處理單位，更常見的作法是
+透過
+分詞演算法（Tokenization）將
+文本
+分段，以「次詞單位（Subword Unit）」構成詞彙表
+來重新編碼文本，用於文字模型的訓練與推理。
+
+分詞方法的優點一般包含：
+
+\begin{enumerate}
+    \item 固定詞彙表大小，避免未登錄詞（Out-of-vocabulary，OOV）
+    \item 縮短資料序列的長度，提升訓練和推論的效率。
+    \item 分解單詞，捕捉更細緻的語意關係，模擬如英語中的字首（Prefix）、字尾（Suffix）等等具有特定意義的文字組合。
+\end{enumerate}
+
+\subsection{常見演算法}
+
+　　
+以下介紹幾種常見的分詞方法：
+
+\paragraph{位元組對編碼（Byte Pair Encoding，BPE）}
+
+位元組對編碼 \cite{10.5555/177910.177914, sennrich_neural_2016} 是一種常用的分詞方法，最初來自資料壓縮技術 \cite{10.5555/177910.177914}，後來被引入到自然語言處理領域，用以處理機器翻譯問題 \cite{sennrich_neural_2016} 。
+該演算法從字元開始，根據詞彙表中各個次詞單位的頻率，反覆合併常見的字元成為新的次詞單位，直到達到預定的詞彙表大小。
+
+% BPE 的基本思想是通過反覆合併頻繁出現的字節對來構建子詞單元。其主要優點包括：
+
+
+% \begin{enumerate}
+%     \item 減少詞彙表的大小：BPE 通過將常見的子詞單元加入詞彙表，顯著減少了詞彙表的大小，提高了模型的泛化能力。
+%     \item 處理罕見詞和新詞：通過使用子詞單元，BPE 能夠更好地處理罕見詞和新詞，因為這些詞可以拆分為已存在的子詞單元。
+%     \item 減少數據冗餘：BPE 在減少數據冗餘方面表現出色，提升了訓練和推理的效率。
+% \end{enumerate}
+
+
+% \draftbegin
+% \input{4-3-tokenization}
+% \drafttermi
+\paragraph{單詞片段（WordPiece）}
+
+WordPiece \cite{wu2016google} 演算法由 Google 用以訓練機器翻譯系統，並在 BERT \cite{devlin_bert_2019} 模型中被使用而廣為人知。與 BPE 同樣是透過反覆合併的策略，但合併的依據改以機率模型取代出現頻率。
+
+\paragraph{單一詞語言模型（Unigram Language Model）}
+
+單一詞語言模型 \cite{kudo2018subword} 是基於語言模型的分詞方法，以機率分佈選擇次詞單位，並以最大化輸入文本的機率來為文本分段。
+
+
+\subsection{句子片段（SentencePiece）套件}
+
+　　
+SentencePiece \cite{kudo_sentencepiece_2018}
+是由 Google 開發的分詞套件，實作了前述的 BPE 和單一詞演算法。其優勢在於可應用於不同語言，尤其用於處理中文、日文等不使用空格分隔單詞的語言文本時，此套件大大的簡化了前處理的流程。
+
+
+\input{scripts/before/4after}
